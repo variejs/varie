@@ -1,0 +1,44 @@
+<!doctype html>
+<!--[if IE 7]> <html class="no-js lt-ie8 lt-ie9 lt-ie10" lang="en" > <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9 lt-ie10" lang="en" > <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" lang="en" > <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta http-equiv="x-ua-compatible" content="IE=Edge" >
+
+		<meta http-equiv='cache-control' content='no-cache'>
+		<meta http-equiv='expires' content='0'>
+		<meta http-equiv='pragma' content='no-cache'>
+
+		<title page-title>Project Builder</title>
+		<base href="/">
+
+		<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+		<link rel="stylesheet" href="https://in.gov/core/css/header-global-ii.css">
+		<link rel="stylesheet" href="https://in.gov/core/css/header-agency-ii.css">
+
+		<% for (var css in htmlWebpackPlugin.files.css) { %><link href="<%= htmlWebpackPlugin.files.css[css].replace(/\\/g, '/').replace(/^\//, '') %>" rel="stylesheet">
+		<% } %>
+	</head>
+	<body>
+		<!--<%= htmlWebpackPlugin.options.version%>-->
+
+		<!--[if lte IE 9]><div class="outdated-browser text-center">Your browser is out of date. Please upgrade to a <a href="http://outdatedbrowser.com/">Supported Browser</a>.</div><![endif]-->
+
+		<div id="app" class="app">
+			<navigation></navigation>
+			<router-view></router-view>
+			<app-footer></app-footer>
+			<notifications></notifications>
+		</div>
+
+		<!--<%= htmlWebpackPlugin.options.version%>-->
+
+		<% for (var chunk in htmlWebpackPlugin.files.chunks) { %><script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry.replace(/\\/g, '/').replace(/^\//, '') %>"></script>
+		<% } %>
+	</body>
+</html>
