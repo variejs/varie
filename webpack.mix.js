@@ -53,8 +53,7 @@ mix
         "@models": path.join(__dirname, "app/models"),
         "@resources": path.join(__dirname, "resources"),
         "@views": path.join(__dirname, "resources/views"),
-        "@components": path.join(__dirname, "app/components"),
-        "@varie": path.join(__dirname, "node_modules/vari-framework")
+        "@components": path.join(__dirname, "app/components")
       }
     }
   })

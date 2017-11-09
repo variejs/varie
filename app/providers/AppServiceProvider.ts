@@ -1,8 +1,8 @@
 import Vue from "vue";
 import * as moment from "moment-timezone";
-import ServiceProvider from "@varie/support/serviceProvider";
-import RouterInterface from "@varie/routing/RouterInterface";
-import StateServiceInterface from "@varie/state/stateServiceInterface";
+import ServiceProvider from "varie-framework/support/serviceProvider";
+import RouterInterface from "varie-framework/routing/RouterInterface";
+import StateServiceInterface from "varie-framework/state/stateServiceInterface";
 
 /*
 |--------------------------------------------------------------------------

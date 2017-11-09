@@ -41,10 +41,7 @@
       "@views/*": ["resources/views/*"],
 
       "@components": ["app/components"],
-      "@components/*": ["app/components/*"],
-
-      "@varie": ["node_modules/varie-framework"],
-      "@varie/*": ["node_modules/varie-framework/*"]
+      "@components/*": ["app/components/*"]
     }
   },
   "include": ["./**/*.ts"]
