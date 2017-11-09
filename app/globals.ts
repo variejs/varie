@@ -1,8 +1,8 @@
-import { interfaces } from 'inversify';
+import { interfaces } from "inversify";
 import Container = interfaces.Container;
-import ConfigInterface from '@varie/config/ConfigInterface';
+import ConfigInterface from "@varie/config/ConfigInterface";
 
 declare global {
-	const $container: Container;
-	const $config: ConfigInterface;
+  const $container: Container;
+  const $config: ConfigInterface;
 }

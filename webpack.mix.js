@@ -1,12 +1,12 @@
-const path = require('path');
+const path = require("path");
 
-let mix = require('laravel-mix');
+let mix = require("laravel-mix");
 let env = process.env.NODE_ENV;
 
-if (env !== 'local') {
-	if (env !== 'development') {
-		mix.config.production = true;
-	}
+if (env !== "local") {
+  if (env !== "development") {
+    mix.config.production = true;
+  }
 }
 
 /*
@@ -17,50 +17,50 @@ if (env !== 'local') {
 |
 */
 mix
-	.typeScript('app/app.ts', 'js')
-	.extract([
-		'ajv',
-		'axios',
-		'inversify',
-		'lodash',
-		'moment-timezone',
-		'reflect-metadata',
-		'vue',
-		'vue-class-component',
-		'vue-property-decorator',
-		'vue-router',
-		'vuex',
-	])
-	.sass('./resources/sass/app.scss', 'css')
-	.setPublicPath('dist')
-	.browserSync({
-		open: 'local',
-		proxy: env.APP_URL,
-		files: ['dist/**/*.js', 'dist/**/*.css'],
-	})
-	.sourceMaps()
-	.webpackConfig({
-		node: {
-			fs: 'empty',
-		},
-		resolve: {
-			alias: {
-				'@app': path.join(__dirname, 'app'),
-				'@routes': path.join(__dirname, 'routes'),
-				'@config': path.join(__dirname, 'config'),
-				'@store': path.join(__dirname, 'app/store'),
-				'@storage': path.join(__dirname, 'storage'),
-				'@models': path.join(__dirname, 'app/models'),
-				'@resources': path.join(__dirname, 'resources'),
-				'@views': path.join(__dirname, 'resources/views'),
-				'@varie': path.join(__dirname, 'framework'),
-				'@components': path.join(__dirname, 'app/components'),
-			},
-		},
-	})
-	.options({
-		extractVueStyles: true,
-	});
+  .typeScript("app/app.ts", "js")
+  .extract([
+    "ajv",
+    "axios",
+    "inversify",
+    "lodash",
+    "moment-timezone",
+    "reflect-metadata",
+    "vue",
+    "vue-class-component",
+    "vue-property-decorator",
+    "vue-router",
+    "vuex"
+  ])
+  .sass("./resources/sass/app.scss", "css")
+  .setPublicPath("dist")
+  .browserSync({
+    open: "local",
+    proxy: env.APP_URL,
+    files: ["dist/**/*.js", "dist/**/*.css"]
+  })
+  .sourceMaps()
+  .webpackConfig({
+    node: {
+      fs: "empty"
+    },
+    resolve: {
+      alias: {
+        "@app": path.join(__dirname, "app"),
+        "@routes": path.join(__dirname, "routes"),
+        "@config": path.join(__dirname, "config"),
+        "@store": path.join(__dirname, "app/store"),
+        "@storage": path.join(__dirname, "storage"),
+        "@models": path.join(__dirname, "app/models"),
+        "@resources": path.join(__dirname, "resources"),
+        "@views": path.join(__dirname, "resources/views"),
+        "@components": path.join(__dirname, "app/components"),
+        "@varie": path.join(__dirname, "node_modules/vari-framework")
+      }
+    }
+  })
+  .options({
+    extractVueStyles: true
+  });
 
 // Full API
 // mix.js(src, output);

@@ -1,5 +1,3 @@
-import AuthCheck from './authCheck';
-
 /*
 |--------------------------------------------------------------------------
 | Route Middleware
@@ -8,7 +6,7 @@ import AuthCheck from './authCheck';
 | in the order in which you provide them
 */
 
-export default [AuthCheck];
+export default [];
 
 // TODO
 // middleware groups

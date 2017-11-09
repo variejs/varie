@@ -1,4 +1,5 @@
-import Home from '@views/home/Home.vue';
+import Home from "@views/home/Home.vue";
+
 /*
 |--------------------------------------------------------------------------
 | Your default routes for your application
@@ -6,7 +7,7 @@ import Home from '@views/home/Home.vue';
 |
 */
 
-export default [{ name: 'home', path: '/', component: Home }];
+export default [{ name: "home", path: "/", component: Home }];
 
 // What i think i want it to look like
 // Route.prefix('api')
