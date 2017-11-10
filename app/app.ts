@@ -5,6 +5,6 @@
 | Bootstrapping the application together
 |
 */
-import { Application } from "varie-framework";
+import { Application } from "varie";
 
 new Application();
