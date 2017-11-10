@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let mix = require("laravel-mix");
 let env = process.env.NODE_ENV;
@@ -35,7 +36,7 @@ mix
   .setPublicPath("dist")
   .browserSync({
     open: "local",
-    proxy: env.APP_URL,
+    proxy: 'varie.dev',
     files: ["dist/**/*.js", "dist/**/*.css"]
   })
   .sourceMaps()
@@ -43,6 +44,12 @@ mix
     node: {
       fs: "empty"
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            hash : true,
+            template: 'index.html'
+        })
+    ],
     resolve: {
       alias: {
         "@app": path.join(__dirname, "app"),
@@ -60,6 +67,8 @@ mix
   .options({
     extractVueStyles: true
   });
+
+// process.cwd()
 
 // Full API
 // mix.js(src, output);

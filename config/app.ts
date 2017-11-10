@@ -1,7 +1,7 @@
 import AppServiceProvider from "@app/providers/AppServiceProvider";
-import StateServiceProvider from "varie-framework/state/serviceProvider";
-import ConfigServiceProvider from "varie-framework/config/serviceProvider";
-import RoutingServiceProvider from "varie-framework/routing/serviceProvider";
+import StateServiceProvider from "varie-framework/lib/state/serviceProvider";
+import ConfigServiceProvider from "varie-framework/lib/config/serviceProvider";
+import RoutingServiceProvider from "varie-framework/lib/routing/serviceProvider";
 
 export default {
   /*
@@ -51,15 +51,15 @@ export default {
   */
   providers: {
     /*
-		 * Framework Service Providers...
-		 */
+     * Framework Service Providers...
+     */
     ConfigServiceProvider,
     StateServiceProvider,
     RoutingServiceProvider,
 
     /*
-		 * Application Service Providers...
-		 */
+     * Application Service Providers...
+     */
     AppServiceProvider
   }
 };
