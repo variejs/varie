@@ -19,7 +19,7 @@
     "lodash": "^4.17.4",
     "moment-timezone": "^0.5.14",
     "reflect-metadata": "^0.1.10",
-    "varie": "^0.0.1",
+    "varie": "^0.0.2",
     "vue": "^2.5.3",
     "vue-class-component": "^6.1.0",
     "vue-property-decorator": "^6.0.0",
