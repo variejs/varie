@@ -44,6 +44,5 @@
       "@components/*": ["app/components/*"]
     }
   },
-//  "include": ["./**/*.ts"]
-    "include": ["./app/app.ts"]
+  "include": ["./**/*.ts"]
 }
