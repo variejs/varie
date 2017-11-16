@@ -51,6 +51,7 @@ mix
         })
     ],
     resolve: {
+      symlinks: false,
       alias: {
         "@app": path.join(__dirname, "app"),
         "@routes": path.join(__dirname, "routes"),

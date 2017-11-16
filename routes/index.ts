@@ -1,5 +1,3 @@
-import Home from "@views/home/Home.vue";
-
 /*
 |--------------------------------------------------------------------------
 | Your default routes for your application
@@ -7,18 +5,13 @@ import Home from "@views/home/Home.vue";
 |
 */
 
-export default [{ name: "home", path: "/", component: Home }];
+$container.get('$route').make('/', 'welcome').setName('home');
 
-// What i think i want it to look like
+$container.get('$route').group('public', () => {
+  $container.get('$route').make('/', 'welcome');
+}).middleware([
+  'auth'
+]);
+//
 // Route.prefix('api')
-//   .group(() => {
-//    Route('/admin', '@views/admin');
-//
-//
-// 	  Route.group(() => {
-// 		  Route('/home', '@views/home');
-// 	  })
-//
-//   })
-//   .template('admin_area')
-//   .middleware(['auth']);
+//.template('admin_area')

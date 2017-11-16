@@ -37,7 +37,7 @@
     }
 </style>
 <template>
-	<section>
+    <section>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
         <div class="flex-center position-ref full-height">
             <div class="content">
@@ -51,11 +51,11 @@
                 </div>
             </div>
         </div>
-	</section>
+    </section>
 </template>
 
 <script>
-    export default {
+  export default {
 
-    }
+  }
 </script>
