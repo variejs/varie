@@ -1,6 +1,6 @@
 {
-  "name": "Varie",
-  "version": "0.0.1",
+  "name": "varie",
+  "version": "0.0.3",
   "description": "Varie Framework for VueJS",
   "scripts": {
     "dev": "cross-env NODE_ENV=local node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
