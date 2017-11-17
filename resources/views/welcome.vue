@@ -48,8 +48,8 @@
                 <div class="links">
                     <a href="#">Documentation</a>
                     <a href="https://github.com/codepier/varie">GitHub</a>
-                    <router-link :to="{ name : 'admin' }">Admin Dashboard</router-link>
-                    <router-link :to="{ name : 'settings' }">Admin Settings</router-link>
+                    <router-link :to="{ name : 'settings' }">Settings</router-link>
+                    <router-link :to="{ name : 'restricted' }">Restricted Settings</router-link>
                 </div>
             </div>
         </div>

@@ -42,12 +42,10 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Varie TEST
+                    Settings
                 </div>
-
                 <div class="links">
-                    <a href="#">Documentation</a>
-                    <a href="https://github.com/codepier/varie">GitHub</a>
+                    <router-link :to="{ name : 'home' }">Go back to the welcome page</router-link>
                 </div>
             </div>
         </div>

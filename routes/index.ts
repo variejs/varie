@@ -8,13 +8,17 @@ let $router = $container.get("$router");
 */
 
 $router.route("/", "welcome").setName("home");
+$router.route("/settings", "settings");
 
 $router
   .group(() => {
-    $router.route("/dashboard", "test").setName('admin');
-    $router.route("/settings", "test").setName('settings');
+    $router.route("/settings", "admin").setName('restricted');
   })
   .middleware(["auth"])
-  .prefix('admin');
-// Route.prefix('api')
-//.template('admin_area')
+  .prefix('admin')
+  // .template('admin_area')
+  // components -- allow for object in the route 2nd paramter
+// // children
+// props
+// redirect
+// aliases

@@ -5,13 +5,8 @@
 | You can setup your global route middleware here, these will execute
 | in the order in which you provide them
 */
+import auth from './Auth';
 
-export default [];
-
-// TODO
-// middleware groups
-// trim strings
-// don't send empty objects
-// convert empty strings to null
-// route middleware
-// route groups
+export default {
+    auth
+};
