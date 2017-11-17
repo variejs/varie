@@ -1,4 +1,4 @@
-import NotificationModel from '@ui.framework/plugins/notifications/models/NotificationModel';
+import NotificationModel from "@models/NotificationModel";
 export interface NotificationsState {
-	notifications: Array<NotificationModel>;
+  notifications: Array<NotificationModel>;
 }
