@@ -1,3 +1,4 @@
+let $router = $container.get('$router');
 /*
 |--------------------------------------------------------------------------
 | Your default routes for your application
@@ -5,13 +6,11 @@
 |
 */
 
-$container.get('$route').make('/', 'welcome').setName('home');
+$router.route('/', 'welcome')
+    // .setName('home');
 
-$container.get('$route').group('public', () => {
-  $container.get('$route').make('/', 'welcome');
-}).middleware([
-  'auth'
-]);
-//
+$router.group(()=> {
+    $router.route('/test', 'test');
+}).middleware(['auth'])
 // Route.prefix('api')
 //.template('admin_area')
