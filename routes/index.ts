@@ -9,3 +9,7 @@ let $router = $container.get<RouterInterface>("$router");
 */
 
 $router.route("/", "welcome");
+
+$router.template('test', 'welcome').group(() => {
+  $router.route("tes", "welcome");
+})
