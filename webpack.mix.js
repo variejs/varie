@@ -24,8 +24,6 @@ mix
     "moment-timezone",
     "reflect-metadata",
     "vue",
-    "vue-class-component",
-    "vue-property-decorator",
     "vue-router",
     "vuex"
   ])
@@ -33,8 +31,8 @@ mix
   .setPublicPath("public")
   .browserSync({
     open: "external",
-    host: env.SITE_URL,
-    proxy: env.SITE_URL,
+    host: env.SITE_URL || 'varie.dev',
+    proxy: env.SITE_URL || 'varie.dev',
     files: ["public/**/*.js", "public/**/*.css"]
   })
   .sourceMaps()
