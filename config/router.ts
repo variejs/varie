@@ -1,5 +1,4 @@
 export default {
-
   /*
   |--------------------------------------------------------------------------
   | Mode
@@ -22,7 +21,7 @@ export default {
   |
   */
 
-  base : "/",
+  base: "/",
 
   /*
   |--------------------------------------------------------------------------
@@ -33,7 +32,7 @@ export default {
   |
   */
 
-  linkActiveClass : "router-link-active",
+  linkActiveClass: "router-link-active",
 
   /*
   |--------------------------------------------------------------------------
@@ -44,7 +43,7 @@ export default {
   |
   */
 
-  linkExactActiveClass : "router-link-exact-active",
+  linkExactActiveClass: "router-link-exact-active",
 
   /*
   |--------------------------------------------------------------------------
@@ -55,7 +54,7 @@ export default {
   |
   */
 
-  scrollBehavior : null,
+  scrollBehavior: null,
 
   /*
   |--------------------------------------------------------------------------
@@ -66,7 +65,7 @@ export default {
   |
   */
 
-  parseQuery : null,
+  parseQuery: null,
 
   /*
   |--------------------------------------------------------------------------
@@ -77,7 +76,7 @@ export default {
   |
   */
 
-  stringifyQuery : null,
+  stringifyQuery: null,
 
   /*
   |--------------------------------------------------------------------------
@@ -89,5 +88,5 @@ export default {
   |
   */
 
-  fallback : true,
+  fallback: true
 };

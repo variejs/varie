@@ -1,7 +1,6 @@
-import NotificationSettings from "varie/src/plugins/notifications/config"
+import NotificationSettings from "varie/src/plugins/notifications/config";
 
 export default {
-
   /*
   |--------------------------------------------------------------------------
   | Duration
@@ -23,4 +22,4 @@ export default {
   |
   */
   component: NotificationSettings.component
-}
+};
