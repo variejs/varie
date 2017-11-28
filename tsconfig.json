@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "baseUrl": "",
+    "target": "es5",
+    "lib": ["es2017", "dom"],
+    "types": [
+      "ajv",
+      "vue",
+      "vuex",
+      "node",
+      "lodash",
+      "vue-router",
+      "webpack-env",
+      "moment-timezone",
+      "reflect-metadata"
+    ],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@app": ["app"],
+      "@app/*": ["app/*"],
+
+      "@config": ["config"],
+      "@config/*": ["config/*"],
+
+      "@store": ["app/store"],
+      "@store/*": ["app/store/*"],
+
+      "@models": ["app/models"],
+      "@models/*": ["app/models/*"],
+
+      "@routes": ["routes"],
+      "@routes/*": ["routes/*"],
+
+      "@resources": ["resources"],
+      "@resources/*": ["resources/*"],
+
+      "@views": ["resources/views"],
+      "@views/*": ["resources/views/*"],
+
+      "@components": ["app/components"],
+      "@components/*": ["app/components/*"]
+    }
+  },
+  "include": ["./**/*.ts"]
+}
