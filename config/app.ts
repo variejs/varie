@@ -1,8 +1,9 @@
 import AppServiceProvider from "@app/providers/AppServiceProvider";
-import StateServiceProvider from "varie/lib/state/serviceProvider";
-import ConfigServiceProvider from "varie/lib/config/serviceProvider";
-import RoutingServiceProvider from "varie/lib/routing/serviceProvider";
-import NotificationsProvider from "varie/lib/plugins/notifications/serviceProvider";
+import StateServiceProvider from "varie/lib/state/ServiceProvider";
+import ConfigServiceProvider from "varie/lib/config/ServiceProvider";
+import RoutingServiceProvider from "varie/lib/routing/ServiceProvider";
+import NotificationsProvider from "varie/lib/plugins/notifications/ServiceProvider";
+import VueHelpersServiceProvider from "varie/lib/plugins/vueHelpers/ServiceProvider";
 
 export default {
   /*
@@ -57,6 +58,7 @@ export default {
     ConfigServiceProvider,
     StateServiceProvider,
     RoutingServiceProvider,
+    VueHelpersServiceProvider,
 
     /*
      * Application Service Providers...

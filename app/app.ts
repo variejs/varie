@@ -9,7 +9,7 @@
 import Vue from "vue";
 import { Application } from "varie";
 import RouterInterface from "varie/lib/routing/RouterInterface";
-import StateServiceInterface from "varie/lib/state/stateServiceInterface";
+import StateServiceInterface from "varie/lib/state/StateServiceInterface";
 
 new Application().boot().then(() => {
   new Vue({

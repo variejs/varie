@@ -1,5 +1,5 @@
 import * as moment from "moment-timezone";
-import ServiceProvider from "varie/lib/support/serviceProvider";
+import ServiceProvider from "varie/lib/support/ServiceProvider";
 
 /*
 |--------------------------------------------------------------------------
