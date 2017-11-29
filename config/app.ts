@@ -3,7 +3,10 @@ import StateServiceProvider from "varie/lib/state/ServiceProvider";
 import ConfigServiceProvider from "varie/lib/config/ServiceProvider";
 import RoutingServiceProvider from "varie/lib/routing/ServiceProvider";
 import NotificationsProvider from "varie/lib/plugins/notifications/ServiceProvider";
-import VueHelpersServiceProvider from "varie/lib/plugins/vueHelpers/ServiceProvider";
+import AutoRegisterMixinsServiceProvider from "varie/lib/plugins/autoRegisterMixins/ServiceProvider";
+import AutoRegisterFiltersServiceProvider from "varie/lib/plugins/autoRegisterFilters/ServiceProvider";
+import AutoRegisterComponentsServiceProvider from "varie/lib/plugins/autoRegisterComponents/ServiceProvider";
+import AutoRegisterDirectivesServiceProvider from "varie/lib/plugins/autoRegisterDirectives/ServiceProvider";
 
 export default {
   /*
@@ -58,7 +61,10 @@ export default {
     ConfigServiceProvider,
     StateServiceProvider,
     RoutingServiceProvider,
-    VueHelpersServiceProvider,
+    AutoRegisterMixinsServiceProvider,
+    AutoRegisterFiltersServiceProvider,
+    AutoRegisterComponentsServiceProvider,
+    AutoRegisterDirectivesServiceProvider,
 
     /*
      * Application Service Providers...
