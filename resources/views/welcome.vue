@@ -6,7 +6,6 @@
                     UI Lib
                 </div>
                 <div class="links">
-                    <router-view></router-view>
                 </div>
             </div>
         </div>

@@ -14,7 +14,6 @@
     "lodash": "^4.17.4",
     "moment-timezone": "^0.5.14",
     "reflect-metadata": "^0.1.10",
-    "varie": "^0.0.15",
     "vue": "^2.5.3",
     "vue-directive-tooltip": "^1.4.1",
     "vue-router": "^3.0.1",

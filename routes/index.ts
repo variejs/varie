@@ -8,8 +8,10 @@ let $router = $container.get<RouterInterface>("$router");
 |
 */
 
-$router.route("/", "welcome");
+$router.route("/", {
+  default : "welcome"
+});
 
-$router.template('test', 'welcome').group(() => {
+$router.template('/test', 'welcome').middleware(['auth']).group(() => {
   $router.route("tes", "welcome");
 })
