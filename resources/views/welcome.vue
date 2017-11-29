@@ -3,9 +3,11 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    UI Lib
+                    Varie
                 </div>
                 <div class="links">
+                    <a href="#">Documentation</a>
+                    <a href="https://github.com/variejs/varie">GitHub</a>
                 </div>
             </div>
         </div>
