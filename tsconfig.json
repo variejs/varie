@@ -7,14 +7,10 @@
     "target": "es5",
     "lib": ["es2017", "dom"],
     "types": [
-      "ajv",
       "vue",
       "vuex",
-      "node",
-      "lodash",
       "vue-router",
       "webpack-env",
-      "moment-timezone",
       "reflect-metadata"
     ],
     "emitDecoratorMetadata": true,

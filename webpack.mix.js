@@ -17,12 +17,6 @@ if (process.env.NODE_ENV !== "local") {
 mix
   .typeScript("app/app.ts", "js")
   .extract([
-    "ajv",
-    "axios",
-    "inversify",
-    "lodash",
-    "moment-timezone",
-    "reflect-metadata",
     "vue",
     "vue-router",
     "vuex"
