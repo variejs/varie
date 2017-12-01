@@ -1,4 +1,3 @@
-import * as moment from "moment-timezone";
 import ServiceProvider from "varie/lib/support/ServiceProvider";
 
 /*
@@ -10,9 +9,7 @@ import ServiceProvider from "varie/lib/support/ServiceProvider";
 |
 */
 export default class AppProvider extends ServiceProvider {
-  public boot() {
-    moment.tz.setDefault($config.get("app.timezone"));
-  }
+  public boot() {}
 
   public register() {}
 }
