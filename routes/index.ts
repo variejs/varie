@@ -1,5 +1,5 @@
+let $router = $app.make<RouterInterface>("$router");
 import RouterInterface from "varie/lib/routing/RouterInterface";
-let $router = $container.get<RouterInterface>("$router");
 
 /*
 |--------------------------------------------------------------------------
