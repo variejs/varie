@@ -3,7 +3,7 @@ const mix = require("laravel-mix");
 const env = require("dotenv").config().parsed;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-if (process.env.NODE_ENV !== "local") {
+if (process.env.NODE_ENV !== "development") {
   mix.config.production = true;
 }
 
