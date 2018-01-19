@@ -1,5 +1,3 @@
-import UserModel from "@models/UserModel";
-import SiteModel from "@models/SiteModel";
 import NotificationModel from "varie/lib/plugins/notifications/models/NotificationModel";
 
 /*
@@ -12,10 +10,6 @@ import NotificationModel from "varie/lib/plugins/notifications/models/Notificati
 */
 
 export default interface rootState {
-  users: {
-    users: Array<UserModel>;
-    sites: Array<SiteModel>;
-  };
   varie: {
     notifications: {
       notifications: Array<NotificationModel>;
