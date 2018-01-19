@@ -6,13 +6,7 @@
     "baseUrl": "",
     "target": "es5",
     "lib": ["es2017", "dom"],
-    "types": [
-      "vue",
-      "vuex",
-      "vue-router",
-      "webpack-env",
-      "reflect-metadata"
-    ],
+    "types": ["vue", "vuex", "vue-router", "webpack-env", "reflect-metadata"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "paths": {

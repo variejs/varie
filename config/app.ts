@@ -2,6 +2,8 @@ import AppServiceProvider from "@app/providers/AppServiceProvider";
 import StateServiceProvider from "varie/lib/state/ServiceProvider";
 import ConfigServiceProvider from "varie/lib/config/ServiceProvider";
 import RoutingServiceProvider from "varie/lib/routing/ServiceProvider";
+import FormsServiceProvider from "varie/lib/plugins/forms/ServiceProvider";
+import ValidationServiceProvider from "varie/lib/validation/ServiceProvider";
 import NotificationsProvider from "varie/lib/plugins/notifications/ServiceProvider";
 import AutoRegisterMixinsServiceProvider from "varie/lib/plugins/autoRegisterMixins/ServiceProvider";
 import AutoRegisterFiltersServiceProvider from "varie/lib/plugins/autoRegisterFilters/ServiceProvider";
@@ -58,9 +60,11 @@ export default {
     /*
      * Framework Service Providers...
      */
-    ConfigServiceProvider,
+    FormsServiceProvider,
     StateServiceProvider,
+    ConfigServiceProvider,
     RoutingServiceProvider,
+    ValidationServiceProvider,
     AutoRegisterMixinsServiceProvider,
     AutoRegisterFiltersServiceProvider,
     AutoRegisterComponentsServiceProvider,

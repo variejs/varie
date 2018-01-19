@@ -1,5 +1,5 @@
 import ConfigInterface from "varie/lib/config/ConfigInterface";
-import ApplicationInterface from 'varie/lib/foundation/ApplicationInterface'
+import ApplicationInterface from "varie/lib/foundation/ApplicationInterface";
 
 /*
 |--------------------------------------------------------------------------

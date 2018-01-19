@@ -16,11 +16,7 @@ if (process.env.NODE_ENV !== "development") {
 */
 mix
   .typeScript("app/app.ts", "js")
-  .extract([
-    "vue",
-    "vue-router",
-    "vuex"
-  ])
+  .extract(["vue", "vue-router", "vuex"])
   .sass("./resources/sass/app.scss", "css")
   .setPublicPath("public")
   .browserSync({
