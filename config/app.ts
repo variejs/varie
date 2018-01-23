@@ -1,3 +1,4 @@
+import HttpServiceProvider from "varie/lib/http/ServiceProvider";
 import AppServiceProvider from "@app/providers/AppServiceProvider";
 import StateServiceProvider from "varie/lib/state/ServiceProvider";
 import ConfigServiceProvider from "varie/lib/config/ServiceProvider";
@@ -60,10 +61,11 @@ export default {
     /*
      * Framework Service Providers...
      */
-    FormsServiceProvider,
-    StateServiceProvider,
     ConfigServiceProvider,
+    StateServiceProvider,
+    HttpServiceProvider,
     RoutingServiceProvider,
+    FormsServiceProvider,
     ValidationServiceProvider,
     AutoRegisterMixinsServiceProvider,
     AutoRegisterFiltersServiceProvider,
