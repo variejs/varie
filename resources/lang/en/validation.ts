@@ -51,7 +51,8 @@ export default {
   required_with: "The :field field is required when :values is present.",
   required_with_all: "The :field field is required when :values is present.",
   required_without: "The :field field is required when :values is not present.",
-  required_without_all: "The :field field is required when none of :values are present.",
+  required_without_all:
+    "The :field field is required when none of :values are present.",
   same: "The :field and :other must match.",
   size: {
     numeric: "The :field must be :size.",
@@ -60,6 +61,5 @@ export default {
     array: "The :field must contain :size items."
   },
   string: "The :field must be a string.",
-  url: "The :field format is invalid.",
-
+  url: "The :field format is invalid."
 };
