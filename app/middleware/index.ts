@@ -1,3 +1,3 @@
-import Loading from "varie/lib/http/middleware/Loading";
+import LoadingScreen from "./LoadingScreen";
 
-export default [Loading];
+export default [LoadingScreen];
