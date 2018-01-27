@@ -35,15 +35,21 @@ export default class Loading {
     let spinnerElement = this._getSpinnerElement();
 
     if (!spinnerElement) {
-      document.body.innerHTML +=
-        '<div id="spinner" class="sk-container">' +
-        '<div class="sk-folding-cube">' +
-        '  <div class="sk-cube1 sk-cube"></div>' +
-        '  <div class="sk-cube2 sk-cube"></div>' +
-        '  <div class="sk-cube4 sk-cube"></div>' +
-        '  <div class="sk-cube3 sk-cube"></div>' +
-        "</div>" +
-        "</div>";
+      let spinner = document.createElement("div");
+      spinner.id = "app-spinner";
+      spinner.classList.add("sk-container");
+
+      let cube = document.createElement("div");
+      cube.classList.add("sk-folding-cube");
+      for (let i = 1; i <= 4; i++) {
+        let cubePart = document.createElement("div");
+        cubePart.classList.add(`sk-cube`);
+        cubePart.classList.add(`sk-cube${i}`);
+        cube.appendChild(cubePart);
+      }
+      spinner.appendChild(cube);
+
+      document.body.appendChild(spinner);
     }
   }
 

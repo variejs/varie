@@ -1,5 +1,4 @@
 export default {
-
   /*
   |--------------------------------------------------------------------------
   | Base URL
@@ -22,5 +21,5 @@ export default {
     common: {
       "X-Requested-With": "XMLHttpRequest"
     }
-  },
+  }
 };
