@@ -4,7 +4,7 @@
       <div class="content">
         <div class="title m-b-md">Varie</div>
         <div class="links">
-          <a href="#">Documentation</a>
+          <a href="https://varie.io">Documentation</a>
           <a href="https://github.com/variejs/varie">GitHub</a>
         </div>
       </div>
@@ -12,10 +12,7 @@
   </section>
 </template>
 
-
 <script>
-  import Vue from "vue";
-  export default Vue.extend({
-
-  });
+import Vue from "vue";
+export default Vue.extend({});
 </script>

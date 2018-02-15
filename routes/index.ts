@@ -9,3 +9,4 @@ import RouterInterface from "varie/lib/routing/RouterInterface";
 */
 
 $router.route("/", "welcome");
+$router.route("*", "errors/404");

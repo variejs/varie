@@ -15,23 +15,23 @@
     "pretty": "prettier --write './**/*.*(ts|js|json|vue)'"
   },
   "dependencies": {
-    "vue": "^2.5.3",
+    "vue": "^2.5.13",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.13.2",
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0",
-    "cross-env": "^5.1.1",
-    "dotenv": "^4.0.0",
+    "@types/webpack-env": "^1.13.5",
+    "browser-sync": "^2.23.6",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "cross-env": "^5.1.3",
+    "dotenv": "^5.0.0",
     "html-webpack-plugin": "^2.30.1",
     "inline-style-loader": "^0.0.5",
-    "laravel-mix": "^1.6.1",
-    "ts-loader": "^3.1.1",
-    "typescript": "^2.6.1",
-    "varie": "~0.0.24",
-    "vue-loader": "^13.4.0",
-    "vue-template-compiler": "^2.5.3"
+    "laravel-mix": "^2.0.0",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.2",
+    "varie": "~0.0.27",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13"
   }
 }
