@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "node_modules/webpack/bin/webpack.js --progress --hide-modules",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
     "prod": "node_modules/webpack/bin/webpack.js --no-progress --hide-modules"
   },
   "dependencies": {

@@ -21,8 +21,8 @@ mix
   .setPublicPath("public")
   .browserSync({
     open: "external",
-    host: env ? env.SITE_URL : "varie.test",
-    proxy: env ? env.SITE_URL : "varie.test",
+    host: "varie.test",
+    proxy: "varie.test",
     files: ["public/**/*.js", "public/**/*.css"]
   })
   .sourceMaps()
