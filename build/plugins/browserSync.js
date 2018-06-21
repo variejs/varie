@@ -6,5 +6,13 @@ module.exports = function browserSync(config) {
     host: config.host,
     proxy: config.host,
     files: ["public/**/*.js", "public/**/*.css"],
+      snippetOptions: {
+          rule: {
+              match: /(<\/body>|<\/pre>)/i,
+              fn: function(snippet, match) {
+                  return snippet + match;
+              }
+          }
+      }
   });
 };
