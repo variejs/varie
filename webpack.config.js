@@ -11,7 +11,7 @@ const config = {
 module.exports = {
   mode: config.mode,
   context: config.root,
-  devtool: config.isProduction ? "hidden-source-map" : "eval-source-map",
+  devtool: config.isProduction ? "source-map" : "eval-source-map",
   entry: {
     app: [
       path.join(config.root, "app/app.ts"),
@@ -57,6 +57,9 @@ module.exports = {
     require("./build/plugins/html")(),
     require("./build/plugins/vue")(),
     require("./build/plugins/cssExtract")(),
+    require("./build/plugins/define")({
+      ENV: config.mode,
+    }),
     require("./build/plugins/preload")(),
     require("./build/plugins/errors")(),
     require("./build/plugins/hashedModuleIds")(),
