@@ -3,7 +3,7 @@ module.exports = function fontsLoader(context) {
     test: /\.(woff2?|ttf|eot|svg|otf)$/,
     loader: "file-loader",
     options: {
-      name: path => {
+      name: (path) => {
         if (!/node_modules/.test(path)) {
           return "fonts/[name].[ext]?[hash]";
         }
@@ -16,7 +16,7 @@ module.exports = function fontsLoader(context) {
           "?[hash]"
         );
       },
-      publicPath: context.baseHref
-    }
+      publicPath: context.baseHref,
+    },
   };
 };

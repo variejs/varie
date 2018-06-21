@@ -16,8 +16,8 @@
 import Vue from "vue";
 export default Vue.extend({
   mounted() {
-    this.$store.dispatch('test/test')
-    console.info(this.$store.getters['test/GET_TEST']);
-  }
+    this.$store.dispatch("test/test");
+    console.info(this.$store.getters["test/GET_TEST"]);
+  },
 });
 </script>

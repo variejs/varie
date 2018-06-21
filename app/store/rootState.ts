@@ -15,4 +15,4 @@ export default interface rootState {
       notifications: Array<NotificationModel>;
     };
   };
-};
+}

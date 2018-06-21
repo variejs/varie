@@ -76,6 +76,6 @@ export default {
      * Application Service Providers...
      */
     AppServiceProvider,
-    NotificationsProvider
-  }
+    NotificationsProvider,
+  },
 };

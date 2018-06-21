@@ -1,6 +1,5 @@
 .env
-public/js
-public/css
+public/
 node_modules
 public/index.html
 public/mix-manifest.json

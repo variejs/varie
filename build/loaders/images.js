@@ -5,7 +5,7 @@ module.exports = function imageLoader(context) {
       {
         loader: "file-loader",
         options: {
-          name: path => {
+          name: (path) => {
             if (!/node_modules/.test(path)) {
               return "images/[name].[ext]?[hash]";
             }
@@ -18,8 +18,8 @@ module.exports = function imageLoader(context) {
               "?[hash]"
             );
           },
-          publicPath: context.baseHref
-        }
+          publicPath: context.baseHref,
+        },
       },
       {
         loader: "img-loader",
@@ -28,9 +28,9 @@ module.exports = function imageLoader(context) {
           gifsicle: {},
           mozjpeg: {},
           optipng: {},
-          svgo: {}
-        }
-      }
-    ]
+          svgo: {},
+        },
+      },
+    ],
   };
 };

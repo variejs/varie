@@ -6,39 +6,39 @@ module.exports = function scssLoader(context) {
     test: /\.scss$/,
     use: [
       {
-        loader: MiniCssExtractPlugin.loader
+        loader: MiniCssExtractPlugin.loader,
       },
       {
         loader: "css-loader",
         options: {
           sourceMap: !context.isProduction,
-          minimize: context.isProduction
-        }
+          minimize: context.isProduction,
+        },
       },
       {
         loader: "postcss-loader",
         options: {
           ident: "postcss",
           autoprefixer: {
-            browsers: ["last 2 versions"]
+            browsers: ["last 2 versions"],
           },
           sourceMap: !context.isProduction,
-          plugins: () => [autoprefixer]
-        }
+          plugins: () => [autoprefixer],
+        },
       },
       {
         loader: "resolve-url-loader",
         options: {
-          sourceMap: true
-        }
+          sourceMap: true,
+        },
       },
       {
         loader: "sass-loader",
         options: {
-          sourceMap: !context.isProduction
-        }
-      }
-    ]
+          sourceMap: !context.isProduction,
+        },
+      },
+    ],
   };
 };
 //

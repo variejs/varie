@@ -1,10 +1,10 @@
 const path = require("path");
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
-const webpack = require('webpack');
+const PreloadWebpackPlugin = require("preload-webpack-plugin");
+const webpack = require("webpack");
 
 const context = {
   root: path.resolve(__dirname),
-  mode: 'development',
+  mode: "development",
   isProduction: false,
 };
 
@@ -13,16 +13,14 @@ module.exports = {
   context: context.root,
   devtool: "eval-source-map",
   entry: {
-    vendor : ["vue", "vuex"],
-    app : [
+    vendor: ["vue", "vuex"],
+    app: [
       path.join(context.root, "app/app.ts"),
-      path.join(context.root, "resources/sass/app.scss")
-    ]
+      path.join(context.root, "resources/sass/app.scss"),
+    ],
   },
   output: {
-      path : path.join(context.root, 'public'),
-      filename: 'js/[name].[chunkhash:8].js',
-      chunkFilename: 'js/[name].[chunkhash:8].js'
+    path: path.join(context.root, "public"),
   },
   module: {
     noParse: /^(vue|vue-router|vuex|vuex-router-sync)$/,
@@ -34,7 +32,7 @@ module.exports = {
       require("./build/loaders/images")(context),
       require("./build/loaders/fonts")(context),
       require("./build/loaders/vue")(),
-    ]
+    ],
   },
   plugins: [
     require("./build/plugins/vue")(),
@@ -43,26 +41,19 @@ module.exports = {
     require("./build/plugins/cssExtract")(context),
     require("./build/plugins/browserSync")(context),
     require("./build/plugins/notifications")(context),
-      new webpack.HashedModuleIdsPlugin({
-          hashFunction: 'sha256',
-          hashDigest: 'hex',
-          hashDigestLength: 20
-      }),
-      require('./build/plugins/html')(context),
-      new PreloadWebpackPlugin(),
+    new webpack.HashedModuleIdsPlugin({
+      hashFunction: "sha256",
+      hashDigest: "hex",
+      hashDigestLength: 20,
+    }),
+    require("./build/plugins/html")(context),
+    new PreloadWebpackPlugin(),
   ],
   resolve: {
     symlinks: false,
-    extensions: [
-      '.js',
-      '.jsx',
-      '.ts',
-      '.tsx',
-      '.vue',
-      '.json'
-    ],
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".json"],
     alias: {
-      vue$: 'vue/dist/vue.esm.js',
+      vue$: "vue/dist/vue.esm.js",
       "@app": path.join(__dirname, "app"),
       "@routes": path.join(__dirname, "routes"),
       "@config": path.join(__dirname, "config"),
@@ -70,7 +61,7 @@ module.exports = {
       "@models": path.join(__dirname, "app/models"),
       "@resources": path.join(__dirname, "resources"),
       "@views": path.join(__dirname, "resources/views"),
-      "@components": path.join(__dirname, "app/components")
-    }
-  }
+      "@components": path.join(__dirname, "app/components"),
+    },
+  },
 };

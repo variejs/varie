@@ -23,15 +23,15 @@ mix
     open: "external",
     host: "varie.test",
     proxy: "varie.test",
-    files: ["public/**/*.js", "public/**/*.css"]
+    files: ["public/**/*.js", "public/**/*.css"],
   })
   .sourceMaps()
   .webpackConfig({
     plugins: [
       new HtmlWebpackPlugin({
         hash: true,
-        template: "index.html"
-      })
+        template: "index.html",
+      }),
     ],
     resolve: {
       symlinks: false,
@@ -43,10 +43,10 @@ mix
         "@models": path.join(__dirname, "app/models"),
         "@resources": path.join(__dirname, "resources"),
         "@views": path.join(__dirname, "resources/views"),
-        "@components": path.join(__dirname, "app/components")
-      }
-    }
+        "@components": path.join(__dirname, "app/components"),
+      },
+    },
   })
   .options({
-    extractVueStyles: true
+    extractVueStyles: true,
   });

@@ -11,19 +11,19 @@ class JuiceWebpackPlugin {
 
   apply(compiler) {
     let files = [];
-    compiler.hooks.run.tap(pluginName, compilation => {
+    compiler.hooks.run.tap(pluginName, (compilation) => {
       files = fs
         .readdirSync(this.options.email_directory)
-        .map(file => `${this.options.email_directory}/${file}`)
-        .filter(file => !fs.lstatSync(file).isDirectory());
+        .map((file) => `${this.options.email_directory}/${file}`)
+        .filter((file) => !fs.lstatSync(file).isDirectory());
 
-      files.forEach(file => {
+      files.forEach((file) => {
         juice.juiceFile(
           file,
           {
             webResources: {
-              relativeTo: "email"
-            }
+              relativeTo: "email",
+            },
           },
           (error, html) => {
             if (!error) {
@@ -33,18 +33,18 @@ class JuiceWebpackPlugin {
                 },
                 size: function() {
                   return html.length;
-                }
+                },
               };
             } else {
               // ?
             }
-          }
+          },
         );
       });
     });
 
-    compiler.hooks.emit.tap(pluginName, compilation => {
-      files.forEach(file => {
+    compiler.hooks.emit.tap(pluginName, (compilation) => {
+      files.forEach((file) => {
         compilation.fileDependencies.push(path.join(compiler.context, file));
       });
     });
@@ -53,6 +53,6 @@ class JuiceWebpackPlugin {
 
 module.exports = function emailPlugin(context) {
   return new JuiceWebpackPlugin({
-    email_directory: path.join(context.root, "email")
+    email_directory: path.join(context.root, "email"),
   });
 };
