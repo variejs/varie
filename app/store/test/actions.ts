@@ -10,6 +10,6 @@ export default class Actions {
 
   test = (context: ActionContext<TestState, RootState>, data) => {
     console.info(this.$http);
-    context.commit("UPDATE_TEST", 123);
+    context.commit("UPDATE_TEST", 5555);
   };
 }
