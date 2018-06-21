@@ -7,11 +7,9 @@
   },
   "dependencies": {
     "inversify-inject-decorators": "^3.1.0",
-    "typescript": "^2.9.2",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "webpack-cli": "^3.0.8"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@types/webpack-env": "^1.13.6",
@@ -37,10 +35,12 @@
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.0.3",
     "ts-loader": "^4.4.1",
+    "typescript": "^2.9.2",
     "varie": "~0.0.43",
     "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
     "webpack-notifier": "^1.6.0"
   }
 }

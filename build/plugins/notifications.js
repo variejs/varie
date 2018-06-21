@@ -3,8 +3,7 @@ const WebpackNotifierPlugin = require("webpack-notifier");
 
 module.exports = function notificationsPlugin(context) {
   return new WebpackNotifierPlugin({
-    title: context.appName,
+    title: context.appName, // TODO
     alwaysNotify: true,
-    contentImage: path.join(context.root, "app/images/dfw_logo.gif"),
   });
 };

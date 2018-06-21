@@ -1,6 +1,6 @@
 const path = require("path");
-const PreloadWebpackPlugin = require("preload-webpack-plugin");
-const webpack = require("webpack");
+
+
 
 const context = {
   root: path.resolve(__dirname),
@@ -11,7 +11,7 @@ const context = {
 module.exports = {
   mode: context.mode,
   context: context.root,
-  devtool: "eval-source-map",
+  devtool: "eval-source-map", // TOOD - needs to be diff for production
   entry: {
     vendor: ["vue", "vuex"],
     app: [
@@ -23,31 +23,28 @@ module.exports = {
     path: path.join(context.root, "public"),
   },
   module: {
-    noParse: /^(vue|vue-router|vuex|vuex-router-sync)$/,
+    noParse: /^(vue|vue-router|vuex|vuex-router-sync|varie)$/,
     rules: [
       require("./build/loaders/js")(),
       require("./build/loaders/ts")(),
+      require("./build/loaders/vue")(),
+      require("./build/loaders/json")(),
       require("./build/loaders/scss")(context),
       require("./build/loaders/html")(),
       require("./build/loaders/images")(context),
       require("./build/loaders/fonts")(context),
-      require("./build/loaders/vue")(),
     ],
   },
   plugins: [
-    require("./build/plugins/vue")(),
-    require("./build/plugins/clean")(context),
-    require("./build/plugins/errors")(),
-    require("./build/plugins/cssExtract")(context),
-    require("./build/plugins/browserSync")(context),
-    require("./build/plugins/notifications")(context),
-    new webpack.HashedModuleIdsPlugin({
-      hashFunction: "sha256",
-      hashDigest: "hex",
-      hashDigestLength: 20,
-    }),
     require("./build/plugins/html")(context),
-    new PreloadWebpackPlugin(),
+    require("./build/plugins/vue")(),
+    require("./build/plugins/cssExtract")(context),
+    require("./build/plugins/preload")(),
+    require("./build/plugins/errors")(),
+    require("./build/plugins/hashedModuleIds")(),
+    require("./build/plugins/clean")(context),
+    require("./build/plugins/notifications")(context),
+    require("./build/plugins/browserSync")(context),
   ],
   resolve: {
     symlinks: false,
