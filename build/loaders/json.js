@@ -1,6 +1,6 @@
 module.exports = function jsonLoader() {
-    return  {
-        test: /\.json$/,
-        loader: 'json-loader'
-    };
+  return {
+    test: /\.json$/,
+    loader: "json-loader",
+  };
 };

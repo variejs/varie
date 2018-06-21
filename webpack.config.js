@@ -1,7 +1,5 @@
 const path = require("path");
 
-
-
 const context = {
   root: path.resolve(__dirname),
   mode: "development",
