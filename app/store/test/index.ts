@@ -19,7 +19,7 @@ export default class Test {
   ) {
       this.name = "Test";
       this.state = state;
-      this.actions = new actions($http);
+      this.actions = new actions();
       this.getters = new getters.default();
       this.mutations = new mutations.default();
       this.namespaced = true;
