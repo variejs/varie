@@ -50,7 +50,7 @@ module.exports = {
     symlinks: false,
     extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".json"],
     alias: {
-      vue$: "vue/dist/vue.common.js",
+      vue$: "vue/dist/vue.esm.js",
       "@app": path.join(__dirname, "app"),
       "@routes": path.join(__dirname, "routes"),
       "@config": path.join(__dirname, "config"),
