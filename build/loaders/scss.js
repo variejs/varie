@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer");
 
-module.exports = function scssLoader(context) {
+module.exports = function scssLoader(config) {
   return {
     test: /\.scss$/,
     use: [
@@ -11,8 +11,8 @@ module.exports = function scssLoader(context) {
       {
         loader: "css-loader",
         options: {
-          sourceMap: !context.isProduction,
-          minimize: context.isProduction,
+          sourceMap: !config.isProduction,
+          minimize: config.isProduction,
         },
       },
       {
@@ -22,30 +22,22 @@ module.exports = function scssLoader(context) {
           autoprefixer: {
             browsers: ["last 2 versions"],
           },
-          sourceMap: !context.isProduction,
+          sourceMap: !config.isProduction,
           plugins: () => [autoprefixer],
         },
       },
       {
         loader: "resolve-url-loader",
         options: {
-          sourceMap: true,
+          sourceMap: !config.isProduction,
         },
       },
       {
         loader: "sass-loader",
         options: {
-          sourceMap: !context.isProduction,
+          sourceMap: !config.isProduction,
         },
       },
     ],
   };
 };
-//
-//
-// new MiniCssExtractPlugin(
-//     {
-//         filename: 'css/[name].[contenthash:8].css',
-//         chunkFilename: 'css/[name].[contenthash:8].css'
-//     }
-// ),

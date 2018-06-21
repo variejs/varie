@@ -1,9 +1,8 @@
-const path = require("path");
 const WebpackNotifierPlugin = require("webpack-notifier");
 
-module.exports = function notificationsPlugin(context) {
+module.exports = function notificationsPlugin(config) {
   return new WebpackNotifierPlugin({
-    title: context.appName, // TODO
+    title: config.appName,
     alwaysNotify: true,
   });
 };

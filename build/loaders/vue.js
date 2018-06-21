@@ -1,4 +1,4 @@
-module.exports = function vueLoader(context) {
+module.exports = function vueLoader() {
   return {
     test: /\.vue$/,
     use: ["cache-loader", "vue-loader"],
