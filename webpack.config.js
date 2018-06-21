@@ -13,11 +13,29 @@ module.exports = {
   context: config.root,
   devtool: config.isProduction ? "hidden-source-map" : "eval-source-map",
   entry: {
-    vendor: ["vue", "vue-router", "vuex"], // TODO - we can do this differntly
     app: [
       path.join(config.root, "app/app.ts"),
       path.join(config.root, "resources/sass/app.scss"),
     ],
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          name: "vendors",
+          test: /[\\\/]node_modules[\\\/]/,
+          priority: -10,
+          chunks: "all",
+        },
+        common: {
+          name: "chunk-common",
+          minChunks: 2,
+          priority: -20,
+          chunks: "all",
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   output: {
     path: path.join(config.root, "public"),
