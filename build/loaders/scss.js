@@ -13,6 +13,7 @@ module.exports = function scssLoader(config) {
         options: {
           sourceMap: !config.isProduction,
           minimize: config.isProduction,
+          importLoaders: 1,
         },
       },
       {
