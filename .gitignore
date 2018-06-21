@@ -1,5 +1,6 @@
 .env
 public/
+.cache-loader/
 node_modules
 public/index.html
 public/mix-manifest.json
