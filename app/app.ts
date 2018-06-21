@@ -17,6 +17,6 @@ new Application().boot().then((app) => {
   new Vue({
     store: app.make<StateServiceInterface>("$store").getStore(),
     router: app.make<RouterInterface>("$router").getRouter(),
-    render : (h) => h(App)
+    render: (h) => h(App),
   }).$mount($config.get("app.mount"));
 });
