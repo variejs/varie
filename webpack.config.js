@@ -1,5 +1,4 @@
 const path = require("path");
-
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const webpack = require('webpack');
 
@@ -8,8 +7,6 @@ const context = {
   mode: 'development',
   isProduction: false,
 };
-
-console.info(JS)
 
 module.exports = {
   mode: context.mode,
