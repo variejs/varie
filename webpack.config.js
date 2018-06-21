@@ -1,5 +1,4 @@
 const path = require("path");
-import JS from './build/components/js'
 
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const webpack = require('webpack');
