@@ -13,7 +13,7 @@ module.exports = {
   context: config.root,
   devtool: config.isProduction ? "hidden-source-map" : "eval-source-map",
   entry: {
-    vendor: ["vue", "vuex"],
+    vendor: ["vue", "vue-router", "vuex"], // TODO - we can do this differntly
     app: [
       path.join(config.root, "app/app.ts"),
       path.join(config.root, "resources/sass/app.scss"),
