@@ -5,6 +5,7 @@ const config = {
   host: "varie.test",
   mode: process.env.NODE_ENV,
   root: path.resolve(__dirname),
+  outputPath : path.join(__dirname, "public"),
   isProduction: process.env.NODE_ENV !== "development",
 };
 
@@ -38,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    path: path.join(config.root, "public"),
+    path: config.outputPath,
   },
   module: {
     noParse: /^(vue|vue-router|vuex|vuex-router-sync|varie)$/,
@@ -54,6 +55,7 @@ module.exports = {
     ],
   },
   plugins: [
+    require("./build/plugins/clean")(config),
     require("./build/plugins/html")(),
     require("./build/plugins/vue")(),
     require("./build/plugins/cssExtract")(),
@@ -63,7 +65,6 @@ module.exports = {
     require("./build/plugins/preload")(),
     require("./build/plugins/errors")(),
     require("./build/plugins/hashedModuleIds")(),
-    require("./build/plugins/clean")(config),
     require("./build/plugins/notifications")(config),
     require("./build/plugins/browserSync")(config),
   ],
