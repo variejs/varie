@@ -7,7 +7,7 @@
 */
 
 import Vue from "vue";
-import App from "@views/layouts/App";
+import App from "@views/layouts/App.vue";
 
 import { Application } from "varie";
 import RouterInterface from "varie/lib/routing/RouterInterface";
