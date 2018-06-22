@@ -5,7 +5,7 @@ const config = {
   host: "varie.test",
   mode: process.env.NODE_ENV,
   root: path.resolve(__dirname),
-  outputPath : path.join(__dirname, "public"),
+  outputPath: path.join(__dirname, "public"),
   isProduction: process.env.NODE_ENV !== "development",
 };
 
@@ -39,7 +39,10 @@ module.exports = {
     },
   },
   output: {
+    publicPath: "/",
     path: config.outputPath,
+    filename: "js/[name].js",
+    chunkFilename: "js/[name].js",
   },
   module: {
     noParse: /^(vue|vue-router|vuex|vuex-router-sync|varie)$/,

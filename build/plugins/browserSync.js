@@ -5,10 +5,7 @@ module.exports = function browserSync(config) {
     open: "external",
     host: config.host,
     proxy: config.host,
-    files: [
-      config.outputPath+"/**/*.js",
-      config.outputPath+"**/*.css"
-    ],
+    files: [config.outputPath + "/**/*.js", config.outputPath + "**/*.css"],
     snippetOptions: {
       rule: {
         match: /(<\/body>|<\/pre>)/i,
