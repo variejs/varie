@@ -17,6 +17,12 @@ module.exports = function scssLoader(config) {
         },
       },
       {
+        loader: "resolve-url-loader",
+        options: {
+          sourceMap: !config.isProduction,
+        },
+      },
+      {
         loader: "postcss-loader",
         options: {
           ident: "postcss",
@@ -25,12 +31,6 @@ module.exports = function scssLoader(config) {
           },
           sourceMap: !config.isProduction,
           plugins: () => [autoprefixer],
-        },
-      },
-      {
-        loader: "resolve-url-loader",
-        options: {
-          sourceMap: !config.isProduction,
         },
       },
       {
