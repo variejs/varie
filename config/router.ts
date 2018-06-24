@@ -88,5 +88,5 @@ export default {
   |
   */
 
-  fallback: true
+  fallback: true,
 };

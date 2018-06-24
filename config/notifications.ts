@@ -21,5 +21,5 @@ export default {
   | You can set a different component to use for the notification package
   |
   */
-  component: NotificationSettings.component
+  component: NotificationSettings.component,
 };

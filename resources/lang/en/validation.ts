@@ -22,7 +22,7 @@ export default {
     numeric: "The :field must be between :min and :max.",
     file: "The :field must be between :min and :max kilobytes.",
     string: "The :field must be between :min and :max characters.",
-    array: "The :field must have between :min and :max items."
+    array: "The :field must have between :min and :max items.",
   },
   boolean: "The :field field must be true or false.",
   date: "The :field is not a valid date.",
@@ -34,14 +34,14 @@ export default {
     numeric: "The :field may not be greater than :max.",
     file: "The :field may not be greater than :max kilobytes.",
     string: "The :field may not be greater than :max characters.",
-    array: "The :field may not have more than :max items."
+    array: "The :field may not have more than :max items.",
   },
   mimetypes: "The :field must be a file of type: :values.",
   min: {
     numeric: "The :field must be at least :min.",
     file: "The :field must be at least :min kilobytes.",
     string: "The :field must be at least :min characters.",
-    array: "The :field must have at least :min items."
+    array: "The :field must have at least :min items.",
   },
   numeric: "The :field must be a number.",
   regex: "The :field format is invalid.",
@@ -58,8 +58,8 @@ export default {
     numeric: "The :field must be :size.",
     file: "The :field must be :size kilobytes.",
     string: "The :field must be :size characters.",
-    array: "The :field must contain :size items."
+    array: "The :field must contain :size items.",
   },
   string: "The :field must be a string.",
-  url: "The :field format is invalid."
+  url: "The :field format is invalid.",
 };

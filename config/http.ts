@@ -19,7 +19,7 @@ export default {
   */
   headers: {
     common: {
-      "X-Requested-With": "XMLHttpRequest"
-    }
-  }
+      "X-Requested-With": "XMLHttpRequest",
+    },
+  },
 };
