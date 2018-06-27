@@ -6,7 +6,7 @@
     "prod": "NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules"
   },
   "dependencies": {
-    "inversify-inject-decorators": "^3.1.0",
+    "varie": "0.0.50",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -36,7 +36,6 @@
     "sass-loader": "^7.0.3",
     "ts-loader": "^4.4.1",
     "typescript": "^2.9.2",
-    "varie": "~0.0.50",
     "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.12.1",
