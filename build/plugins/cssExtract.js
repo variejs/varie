@@ -1,8 +1,8 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = function() {
+module.exports = function(config) {
   return new MiniCssExtractPlugin({
-    filename: "css/[name].css?[contenthash]",
-    chunkFilename: "css/[name].css?[contenthash]",
+    filename: `css/[name].css?[${config.hashType}]`,
+    chunkFilename: `css/[name].css?[${config.hashType}]`,
   });
 };

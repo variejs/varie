@@ -5,8 +5,10 @@ const config = {
   host: "varie.test",
   mode: process.env.NODE_ENV,
   root: path.resolve(__dirname),
+  hmr: process.argv.includes("--hot"),
   outputPath: path.join(__dirname, "public"),
   isProduction: process.env.NODE_ENV !== "development",
+  hashType: process.argv.includes("--hot") ? "hash" : "contenthash",
 };
 
 module.exports = {
@@ -23,8 +25,8 @@ module.exports = {
   output: {
     publicPath: "/",
     path: config.outputPath,
-    filename: "js/[name].js?[contenthash]",
-    chunkFilename: "js/[name].js?[contenthash]",
+    filename: `js/[name].js?[${config.hashType}]`,
+    chunkFilename: `js/[name].js?[${config.hashType}]`,
   },
   module: {
     noParse: /^(vue|vue-router|vuex|vuex-router-sync|varie)$/,
@@ -46,7 +48,7 @@ module.exports = {
     require("./build/plugins/clean")(config),
     require("./build/plugins/html")(),
     require("./build/plugins/vue")(),
-    require("./build/plugins/cssExtract")(),
+    require("./build/plugins/cssExtract")(config),
     require("./build/plugins/moduleConcatentation")(),
     require("./build/plugins/preload")(),
     require("./build/plugins/errors")(),

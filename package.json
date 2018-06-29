@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
-    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
-    "prod": "NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules"
+    "dev": "NODE_ENV=development webpack --progress --hide-modules",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules",
+    "hot": "NODE_ENV=development webpack-dev-server --hot",
+    "prod": "NODE_ENV=production webpack --no-progress --hide-modules"
   },
   "dependencies": {
     "varie": "0.0.50",
