@@ -6,7 +6,7 @@ module.exports = function(config) {
     test: /\.s[ac]ss|\.css/,
     use: [
       {
-        loader: MiniCssExtractPlugin.loader,
+        loader: config.hmr ? "style-loader" : MiniCssExtractPlugin.loader,
       },
       {
         loader: "css-loader",
