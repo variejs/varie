@@ -12,41 +12,13 @@ const config = {
 module.exports = {
   mode: config.mode,
   context: config.root,
+  optimization: require("./build/optimization")(config),
   devtool: config.isProduction ? "source-map" : "eval-source-map",
   entry: {
     app: [
       path.join(config.root, "app/app.ts"),
       path.join(config.root, "resources/sass/app.scss"),
     ],
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: "styles",
-          test: /\.css$/,
-          chunks: "all",
-          enforce: true,
-        },
-        vendors: {
-          name: "vendors",
-          test: /[\\\/]node_modules[\\\/]/,
-          priority: -10,
-          chunks: "initial",
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
-        },
-      },
-    },
-    minimizer: config.isProduction
-      ? [
-          require("./build/plugins/uglify")(),
-          require("./build/plugins/cssOptimization")(),
-        ]
-      : [],
   },
   output: {
     publicPath: "/",
@@ -80,6 +52,7 @@ module.exports = {
     require("./build/plugins/errors")(),
     require("./build/plugins/notifications")(config),
     require("./build/plugins/browserSync")(config),
+    ...require("./build/plugins/hashedModuleIds")(config),
   ],
   resolve: {
     symlinks: false,
@@ -96,29 +69,6 @@ module.exports = {
       "@components": path.join(__dirname, "app/components"),
     },
   },
-  stats: {
-    hash: false,
-    version: false,
-    timings: false,
-    children: false,
-    errorDetails: false,
-    chunks: false,
-    modules: false,
-    reasons: false,
-    source: false,
-    publicPath: false,
-  },
-  performance: {
-    hints: false,
-  },
-  devServer: {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
-    contentBase: config.root,
-    historyApiFallback: true,
-    noInfo: true,
-    compress: true,
-    quiet: true,
-  },
+  stats: require("./build/stats")(),
+  devServer: require("./build/devServer")(config),
 };
