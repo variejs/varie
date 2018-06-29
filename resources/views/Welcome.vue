@@ -4,8 +4,8 @@
       <div class="content">
         <div class="title m-b-md">Varie</div>
         <div class="links">
-          <a href="https://varie.io">Documentation</a>
-          <a href="https://github.com/variejs/varie">GitHub</a>
+          <a target="_blank" href="https://varie.io">Documentation</a>
+          <a target="_blank" href="https://github.com/variejs/varie">GitHub</a>
         </div>
       </div>
     </div>
