@@ -1,7 +1,7 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = function scssLoader(config) {
+module.exports = function(config) {
   return {
     test: /\.scss$/,
     use: [

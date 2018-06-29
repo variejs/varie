@@ -22,27 +22,37 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
+        styles: {
+          name: "styles",
+          test: /\.css$/,
+          chunks: "all",
+          enforce: true,
+        },
         vendors: {
           name: "vendors",
           test: /[\\\/]node_modules[\\\/]/,
           priority: -10,
-          chunks: "all",
+          chunks: "initial",
         },
-        common: {
-          name: "chunk-common",
+        default: {
           minChunks: 2,
           priority: -20,
-          chunks: "all",
           reuseExistingChunk: true,
         },
       },
     },
+    minimizer: config.isProduction
+      ? [
+          require("./build/plugins/uglify")(),
+          require("./build/plugins/cssOptimization")(),
+        ]
+      : [],
   },
   output: {
     publicPath: "/",
     path: config.outputPath,
-    filename: "js/[name].js",
-    chunkFilename: "js/[name].js",
+    filename: "js/[name].js?[contenthash]",
+    chunkFilename: "js/[name].js?[contenthash]",
   },
   module: {
     noParse: /^(vue|vue-router|vuex|vuex-router-sync|varie)$/,
@@ -53,21 +63,21 @@ module.exports = {
       require("./build/loaders/json")(),
       require("./build/loaders/scss")(config),
       require("./build/loaders/html")(),
-      require("./build/loaders/images")(),
       require("./build/loaders/fonts")(),
+      require("./build/loaders/images")(),
     ],
   },
   plugins: [
+    require("./build/plugins/define")({
+      ENV: config.mode,
+    }),
     require("./build/plugins/clean")(config),
     require("./build/plugins/html")(),
     require("./build/plugins/vue")(),
     require("./build/plugins/cssExtract")(),
-    require("./build/plugins/define")({
-      ENV: config.mode,
-    }),
+    require("./build/plugins/moduleConcatentation")(),
     require("./build/plugins/preload")(),
     require("./build/plugins/errors")(),
-    require("./build/plugins/hashedModuleIds")(),
     require("./build/plugins/notifications")(config),
     require("./build/plugins/browserSync")(config),
   ],
@@ -85,5 +95,30 @@ module.exports = {
       "@views": path.join(__dirname, "resources/views"),
       "@components": path.join(__dirname, "app/components"),
     },
+  },
+  stats: {
+    hash: false,
+    version: false,
+    timings: false,
+    children: false,
+    errorDetails: false,
+    chunks: false,
+    modules: false,
+    reasons: false,
+    source: false,
+    publicPath: false,
+  },
+  performance: {
+    hints: false,
+  },
+  devServer: {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+    contentBase: config.root,
+    historyApiFallback: true,
+    noInfo: true,
+    compress: true,
+    quiet: true,
   },
 };

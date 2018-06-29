@@ -1,4 +1,4 @@
-module.exports = function fontsLoader() {
+module.exports = function() {
   return {
     test: /\.(woff2?|ttf|eot|svg|otf)$/,
     loader: "file-loader",

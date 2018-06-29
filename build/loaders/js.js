@@ -1,4 +1,4 @@
-module.exports = function jsLoader() {
+module.exports = function() {
   return {
     test: /\.js$/,
     exclude: /(node_modules|bower_components)/,

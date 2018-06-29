@@ -1,6 +1,6 @@
 let BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
-module.exports = function browserSync(config) {
+module.exports = function(config) {
   return new BrowserSyncPlugin({
     open: "external",
     host: config.host,

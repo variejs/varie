@@ -1,5 +1,5 @@
 const webpack = require("webpack");
 
-module.exports = function providePlugin(definitions = {}) {
+module.exports = function(definitions = {}) {
   return new webpack.DefinePlugin(definitions);
 };

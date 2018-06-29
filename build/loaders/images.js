@@ -1,4 +1,4 @@
-module.exports = function imageLoader() {
+module.exports = function() {
   return {
     test: /\.(png|jpe?g|gif)$/,
     loaders: [

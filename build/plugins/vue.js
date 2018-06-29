@@ -1,5 +1,5 @@
 const { VueLoaderPlugin } = require("vue-loader");
 
-module.exports = function vuePlugin() {
+module.exports = function() {
   return new VueLoaderPlugin();
 };

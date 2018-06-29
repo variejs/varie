@@ -1,4 +1,4 @@
-module.exports = function tsLoader() {
+module.exports = function() {
   return {
     test: /\.tsx?$/,
     use: [

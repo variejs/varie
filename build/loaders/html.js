@@ -1,4 +1,4 @@
-module.exports = function htmlLoader() {
+module.exports = function() {
   return {
     test: /\.html$/,
     loaders: ["html-loader"],
