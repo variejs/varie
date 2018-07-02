@@ -1,4 +1,4 @@
-module.exports = function() {
+module.exports = function(config) {
   return {
     test: /\.(png|jpe?g|gif)$/,
     loaders: [
@@ -11,7 +11,7 @@ module.exports = function() {
       {
         loader: "img-loader",
         options: {
-          enabled: true,
+          enabled: config.isProduction,
           gifsicle: {},
           mozjpeg: {},
           optipng: {},

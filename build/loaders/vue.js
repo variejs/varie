@@ -1,6 +1,6 @@
-module.exports = function() {
+module.exports = function(config) {
   return {
     test: /\.vue$/,
-    use: ["cache-loader", "vue-loader"],
+    use: [...(!config.inProduction ? ["cache-loader"] : []), "vue-loader"],
   };
 };

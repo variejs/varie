@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "outDir": "./dist/",
-    "module": "es2015",
-    "moduleResolution": "node",
+    "outDir": "./public/",
+    "module": "ES6",
+    "moduleResolution": "Node",
     "baseUrl": "",
-    "target": "es5",
-    "lib": ["es2017", "dom"],
+    "target": "ES5",
+    "lib": ["ES6", "dom"],
     "types": ["vue", "vuex", "vue-router", "webpack-env", "reflect-metadata"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

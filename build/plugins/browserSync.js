@@ -7,14 +7,6 @@ module.exports = function(config) {
       host: config.host,
       proxy: config.hmr ? "http://localhost:8080/" : config.host,
       files: [config.outputPath + "/**/*.js", config.outputPath + "**/*.css"],
-      snippetOptions: {
-        rule: {
-          match: /(<\/body>|<\/pre>)/i,
-          fn: function(snippet, match) {
-            return snippet + match;
-          },
-        },
-      },
     },
     { reload: false },
   );

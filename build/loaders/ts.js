@@ -1,8 +1,14 @@
-module.exports = function() {
+module.exports = function(config) {
   return {
     test: /\.tsx?$/,
     use: [
-      "cache-loader",
+      ...(!config.inProduction ? ["cache-loader"] : []),
+      {
+        loader: "babel-loader",
+        options: {
+          presets: ["babel-preset-env"],
+        },
+      },
       {
         loader: "ts-loader",
         options: {
