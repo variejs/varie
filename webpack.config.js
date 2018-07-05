@@ -53,7 +53,6 @@ module.exports = (env, argv) => {
       require("./build/plugins/vue")(config),
       require("./build/plugins/cssExtract")(config),
       require("./build/plugins/moduleConcatentation")(config),
-      require("./build/plugins/preload")(config),
       require("./build/plugins/errors")(config),
       require("./build/plugins/notifications")(config),
       require("./build/plugins/browserSync")(config),
