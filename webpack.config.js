@@ -1,10 +1,12 @@
 const path = require("path");
 
+const envConfig = require('dotenv').config().parsed
+
 module.exports = (env, argv) => {
   const config = {
-    appName: "Varie",
-    host: "varie.test",
     mode: argv.mode,
+    host: envConfig.APP_HOST,
+    appName: envConfig.APP_NAME,
     root: path.resolve(__dirname),
     hmr: process.argv.includes("--hot"),
     isProduction: argv.mode === "production",
