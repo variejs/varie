@@ -10,9 +10,10 @@ module.exports = function(config) {
         },
         vendors: {
           name: "vendors",
-          test: /[\\\/]node_modules[\\\/]/,
+          test: /[\\/]node_modules[\\/]/,
           priority: -10,
-          chunks: "initial",
+          chunks: "all",
+          enforce: true,
         },
         default: {
           minChunks: 2,

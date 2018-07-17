@@ -7,7 +7,7 @@ module.exports = function(config) {
     use: [
       ...(!config.isProduction ? ["cache-loader"] : []),
       {
-        loader: config.hmr ? "style-loader" : MiniCssExtractPlugin.loader,
+        loader: config.isHot ? "style-loader" : MiniCssExtractPlugin.loader,
       },
       {
         loader: "css-loader",

@@ -1,6 +1,6 @@
 const path = require("path");
 
-const envConfig = require('dotenv').config().parsed
+const envConfig = require("dotenv").config().parsed;
 
 module.exports = (env, argv) => {
   const config = {
@@ -8,7 +8,7 @@ module.exports = (env, argv) => {
     host: envConfig.APP_HOST,
     appName: envConfig.APP_NAME,
     root: path.resolve(__dirname),
-    hmr: process.argv.includes("--hot"),
+    isHot: process.argv.includes("--hot"),
     isProduction: argv.mode === "production",
     outputPath: path.join(__dirname, "public"),
     hashType: process.argv.includes("--hot") ? "hash" : "contenthash",
@@ -37,7 +37,6 @@ module.exports = (env, argv) => {
         require("./build/loaders/js")(config),
         require("./build/loaders/ts")(config),
         require("./build/loaders/vue")(config),
-        require("./build/loaders/json")(config),
         require("./build/loaders/scss")(config),
         require("./build/loaders/html")(config),
         require("./build/loaders/fonts")(config),
@@ -48,14 +47,13 @@ module.exports = (env, argv) => {
       require("./build/plugins/define")({
         ENV: config.mode,
       }),
-      require("./build/plugins/clean")(config),
       require("./build/plugins/html")(config),
       require("./build/plugins/vue")(config),
       require("./build/plugins/cssExtract")(config),
-      require("./build/plugins/moduleConcatentation")(config),
       require("./build/plugins/errors")(config),
       require("./build/plugins/notifications")(config),
-      require("./build/plugins/browserSync")(config),
+      ...require("./build/plugins/clean")(config),
+      ...require("./build/plugins/browserSync")(config),
       ...require("./build/plugins/hashedModuleIds")(config),
     ],
     resolve: {

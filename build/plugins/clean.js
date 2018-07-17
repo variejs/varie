@@ -1,7 +1,12 @@
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = function(config) {
-  return new CleanWebpackPlugin([config.outputPath], {
-    root: config.root,
-  });
+  if (!config.isHot) {
+    return [
+      new CleanWebpackPlugin([config.outputPath], {
+        root: config.root,
+      }),
+    ];
+  }
+  return [];
 };
