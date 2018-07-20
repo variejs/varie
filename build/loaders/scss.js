@@ -12,15 +12,9 @@ module.exports = function(config) {
       {
         loader: "css-loader",
         options: {
-          sourceMap: !config.isProduction,
-          minimize: config.isProduction,
           importLoaders: 1,
-        },
-      },
-      {
-        loader: "resolve-url-loader",
-        options: {
-          sourceMap: !config.isProduction,
+          minimize: config.isProduction,
+          sourceMap: config.isProduction,
         },
       },
       {
@@ -30,14 +24,20 @@ module.exports = function(config) {
           autoprefixer: {
             browsers: ["last 2 versions"],
           },
-          sourceMap: !config.isProduction,
+          sourceMap: config.isProduction,
           plugins: () => [autoprefixer],
+        },
+      },
+      {
+        loader: "resolve-url-loader",
+        options: {
+          sourceMap: config.isProduction,
         },
       },
       {
         loader: "sass-loader",
         options: {
-          sourceMap: !config.isProduction,
+          sourceMap: config.isProduction,
         },
       },
     ],

@@ -34,7 +34,6 @@ module.exports = (env, argv) => {
     module: {
       noParse: /^(vue|vue-router|vuex|vuex-router-sync|varie)$/,
       rules: [
-        require("./build/loaders/js")(config),
         require("./build/loaders/ts")(config),
         require("./build/loaders/vue")(config),
         require("./build/loaders/scss")(config),
@@ -49,11 +48,11 @@ module.exports = (env, argv) => {
       }),
       require("./build/plugins/html")(config),
       require("./build/plugins/vue")(config),
-      require("./build/plugins/cssExtract")(config),
-      require("./build/plugins/errors")(config),
-      require("./build/plugins/notifications")(config),
       ...require("./build/plugins/clean")(config),
+      ...require("./build/plugins/errors")(config),
+      ...require("./build/plugins/cssExtract")(config),
       ...require("./build/plugins/browserSync")(config),
+      ...require("./build/plugins/notifications")(config),
       ...require("./build/plugins/hashedModuleIds")(config),
     ],
     resolve: {

@@ -1,6 +1,6 @@
 module.exports = function() {
   return {
-    test: /\.(woff2?|ttf|eot|svg|otf)$/,
+    test: /\.(woff|woff2|ttf|eot|svg|otf)$/,
     loader: "file-loader",
     options: {
       limit: 4096,
