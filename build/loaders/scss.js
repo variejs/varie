@@ -12,32 +12,32 @@ module.exports = function(config) {
       {
         loader: "css-loader",
         options: {
+          sourceMap: true,
           importLoaders: 1,
           minimize: config.isProduction,
-          sourceMap: config.isProduction,
         },
       },
       {
         loader: "postcss-loader",
         options: {
+          sourceMap: true,
           ident: "postcss",
           autoprefixer: {
             browsers: ["last 2 versions"],
           },
-          sourceMap: config.isProduction,
           plugins: () => [autoprefixer],
         },
       },
       {
         loader: "resolve-url-loader",
         options: {
-          sourceMap: config.isProduction,
+          sourceMap: true
         },
       },
       {
         loader: "sass-loader",
         options: {
-          sourceMap: config.isProduction,
+          sourceMap: true
         },
       },
     ],

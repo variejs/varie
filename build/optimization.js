@@ -2,12 +2,6 @@ module.exports = function(config) {
   return {
     splitChunks: {
       cacheGroups: {
-        styles: {
-          name: "styles",
-          test: /\.css$/,
-          chunks: "all",
-          enforce: true,
-        },
         vendors: {
           name: "vendors",
           test: /[\\/]node_modules[\\/]/,
