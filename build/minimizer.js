@@ -1,9 +1,8 @@
+const loadIf = require("~build/helpers/loadIf");
+
 module.exports = function(config) {
-  if (config.isProduction) {
-    return [
-      require("./plugins/uglify")(),
-      require("./plugins/cssOptimization")(),
-    ];
-  }
-  return [];
+  return loadIf(config.isProduction, [
+    require("./plugins/uglify")(),
+    require("./plugins/cssOptimization")(),
+  ]);
 };
