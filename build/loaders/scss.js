@@ -1,11 +1,12 @@
 const autoprefixer = require("autoprefixer");
+const loadIf = require("./../helpers/loadIf");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = function(config) {
   return {
     test: /\.s[ac]ss|\.css/,
     use: [
-      ...(!config.isProduction ? ["cache-loader"] : []),
+      ...loadIf(!config.isProduction, ["cache-loader"]),
       {
         loader: config.isHot ? "style-loader" : MiniCssExtractPlugin.loader,
       },
@@ -31,13 +32,13 @@ module.exports = function(config) {
       {
         loader: "resolve-url-loader",
         options: {
-          sourceMap: true
+          sourceMap: true,
         },
       },
       {
         loader: "sass-loader",
         options: {
-          sourceMap: true
+          sourceMap: true,
         },
       },
     ],

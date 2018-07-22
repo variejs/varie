@@ -1,5 +1,5 @@
 const path = require("path");
-
+const loadIf = require("./build/helpers/loadIf");
 const envConfig = require("dotenv").config().parsed;
 
 module.exports = (env, argv) => {
@@ -48,12 +48,18 @@ module.exports = (env, argv) => {
       }),
       require("./build/plugins/html")(config),
       require("./build/plugins/vue")(config),
-      ...require("./build/plugins/clean")(config),
-      ...require("./build/plugins/errors")(config),
-      ...require("./build/plugins/cssExtract")(config),
-      ...require("./build/plugins/browserSync")(config),
-      ...require("./build/plugins/notifications")(config),
-      ...require("./build/plugins/hashedModuleIds")(config),
+      ...loadIf(!config.isHot, [
+        require("./build/plugins/clean")(config),
+        require("./build/plugins/cssExtract")(config),
+      ]),
+      ...loadIf(!config.isProduction, [
+        require("./build/plugins/errors")(config),
+        require("./build/plugins/browserSync")(config),
+        require("./build/plugins/notifications")(config),
+      ]),
+      ...loadIf(config.isProduction, [
+        require("./build/plugins/hashedModuleIds")(config),
+      ]),
     ],
     resolve: {
       symlinks: false,

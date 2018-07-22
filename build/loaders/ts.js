@@ -1,8 +1,10 @@
+const loadIf = require("./../helpers/loadIf");
+
 module.exports = function(config) {
   return {
     test: /\.tsx?$/,
     use: [
-      ...(!config.isProduction ? ["cache-loader"] : []),
+      ...loadIf(!config.isProduction, ["cache-loader"]),
       {
         loader: "babel-loader",
       },
