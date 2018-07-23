@@ -1,4 +1,4 @@
-const loadIf = require("~build/helpers/loadIf");
+const loadIf = require("./helpers/loadIf");
 
 module.exports = function(config) {
   return loadIf(config.isProduction, [
