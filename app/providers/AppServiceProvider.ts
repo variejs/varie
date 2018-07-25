@@ -8,7 +8,7 @@ import ServiceProvider from "varie/lib/support/ServiceProvider";
 | custom providers that bind the container
 |
 */
-export default class AppProvider extends ServiceProvider {
+export default class AppProviderServiceProvider extends ServiceProvider {
   public boot() {}
 
   public register() {}
