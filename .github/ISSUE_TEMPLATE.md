@@ -1,11 +1,5 @@
----
-name: Bug report
-about: File a Bug Report
-
----
-
 - Varie Version: #.#.#
-- Node Version:
+- Node Version: #.#.#
 
 ### Description:
 
