@@ -1,4 +1,4 @@
 let varieBundler = require('varie-bundler');
-module.exports = function(args) {
- return varieBundler(args);
+module.exports = function(env, argv) {
+ return varieBundler(env, argv, __dirname);
 };
