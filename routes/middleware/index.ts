@@ -6,5 +6,8 @@
 | in the order in which you provide them
 |
 */
+import ProgressBar from './ProgressBar';
 
-export default {};
+export default {
+  ProgressBar
+};

@@ -11,6 +11,7 @@ module.exports = (env, argv) => {
     isHot: process.argv.includes("--hot"),
     isProduction: argv.mode === "production",
     outputPath: path.join(__dirname, "public"),
+    isAnalyzing: process.argv.includes("--analyze"),
     hashType: process.argv.includes("--hot") ? "hash" : "contenthash",
   };
 
@@ -18,7 +19,7 @@ module.exports = (env, argv) => {
     mode: config.mode,
     context: config.root,
     optimization: require("./build/optimization")(config),
-    devtool: config.isProduction ? "source-map" : "eval-source-map",
+    devtool: config.isProduction ? "hidden-source-map" : "eval-source-map",
     entry: {
       app: [
         path.join(config.root, "app/app.ts"),
@@ -59,6 +60,9 @@ module.exports = (env, argv) => {
       ]),
       ...loadIf(config.isProduction, [
         require("./build/plugins/hashedModuleIds")(config),
+      ]),
+      ...loadIf(config.isAnalyzing, [
+        require("./build/plugins/bundleAnalayzer")(config),
       ]),
     ],
     resolve: {

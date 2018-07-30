@@ -6,10 +6,12 @@
     "prod": "webpack --mode production --no-progress --hide-modules"
   },
   "dependencies": {
-    "varie": "0.0.51",
+    "nprogress": "^0.2.0",
+    "varie": "0.0.55",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "webpack-bundle-analyzer": "^2.13.1"
   },
   "devDependencies": {
     "@types/webpack-env": "^1.13.6",
@@ -28,6 +30,7 @@
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "imagemin": "^6.0.0",
     "img-loader": "^3.0.0",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.4.0",

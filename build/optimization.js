@@ -1,13 +1,14 @@
 module.exports = function(config) {
   return {
     splitChunks: {
+      minSize: 30000,
+      maxSize: 50000,
       cacheGroups: {
         vendors: {
-          name: "vendors",
           test: /[\\/]node_modules[\\/]/,
           priority: -10,
-          chunks: "all",
-          enforce: true,
+          name: "vendor",
+          chunks: "initial",
         },
         default: {
           minChunks: 2,
@@ -16,6 +17,8 @@ module.exports = function(config) {
         },
       },
     },
+    runtimeChunk : true,
+    providedExports : true,
     minimizer: require("./minimizer")(config),
   };
 };

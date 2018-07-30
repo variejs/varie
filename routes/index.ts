@@ -8,5 +8,12 @@ import RouterInterface from "varie/lib/routing/RouterInterface";
 |
 */
 
-$router.route("/", "Welcome");
+$router
+  .middleware([
+    'ProgressBar'
+  ])
+  .area('Welcome')
+  .group(() => {
+  $router.route("/", "Welcome");
+})
 $router.route("*", "errors/404");
