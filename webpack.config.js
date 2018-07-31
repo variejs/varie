@@ -3,9 +3,10 @@ const VarieBundler = require('varie-bundler');
 
 module.exports = function(env, argv) {
  return new VarieBundler(argv, __dirname)
-     .variables({
-
-     })
+      .entry('app', [
+        "app/app.ts",
+        "resources/sass/app.scss"
+      ])
      .aliases({
          "@app": path.join(__dirname, "app"),
          "@routes": path.join(__dirname, "routes"),
@@ -16,10 +17,5 @@ module.exports = function(env, argv) {
          "@views": path.join(__dirname, "resources/views"),
          "@components": path.join(__dirname, "app/components"),
      })
-     .customWebpackConfig({
-
-     })
-     .addLoader()
-     .addPlugin()
      .build()
 }
