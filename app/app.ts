@@ -5,9 +5,7 @@
 | Bootstrapping the application together
 |
 */
-
 import Vue from "vue";
-
 import { application } from "varie";
 import BaseLayout from "varie/BaseLayout.vue";
 import RouterInterface from "varie/lib/routing/RouterInterface";
