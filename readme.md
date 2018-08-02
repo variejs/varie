@@ -1,26 +1,23 @@
 ## About Varie
 
-Varie is a framework built ontop of VueJS, and was built in effort to build simple, but powerful vue applications.
+Varie is a Typescript framework for rapidly building powerful and elegant Vue.js applications. Bringing
+in concepts from other languages to speed up your development. Whether working in
+a small / large teams, Varie elevates your starting point to ramp into
+development.
 
-### Features :
+### Notable Features
 
-- A simple routing Engine built on top of Vue Router
-- Routing Middleware
-- State management - Vuex with a bit of magic
-- A dependency injection container
-- Web pack configuration made easy (Mix)
-- HTTP Middleware
-- Plugins
-- And more!
+- Validation
+- CLI Plugin
+- Fluent Router
+- Request Middleware
+- Customizable Bundler
+- Auto Loading Store System
+- Dependency Injection (DI)
 
-Varie is built with simplicity in mind, making it easier to get your product out the door.
+## Official Documentation
 
-## Installation
-
-1.  Install Varie CLI
-    `npm install -g varie-cli`
-2.  Create new project
-    `varie new <my-project>`
+Documentation for Varie can be found on the [Varie website](https://varie.io/docs/latest).
 
 ## License
 
