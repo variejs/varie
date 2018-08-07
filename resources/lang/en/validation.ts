@@ -16,6 +16,7 @@ export default {
   alpha_dash: "The :field may only contain letters, numbers, and dashes.",
   alpha_num: "The :field may only contain letters and numbers.",
   array: "The :field must be an array.",
+  confirmed: ":field must be confirmed.",
   before: "The :field must be a date before :date.",
   before_or_equal: "The :field must be a date before or equal to :date.",
   between: {
