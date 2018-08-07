@@ -12,6 +12,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "varie-bundler": "^0.1.1"
+    "varie-bundler": "^0.2.3",
+    "vue-template-compiler": "^2.5.17"
   }
 }
