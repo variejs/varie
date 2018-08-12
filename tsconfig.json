@@ -14,11 +14,14 @@
       "@app": ["app"],
       "@app/*": ["app/*"],
 
+      "@views": ["views"],
+      "@views/*": ["views/*"],
+
+      "@store": ["store"],
+      "@store/*": ["store/*"],
+
       "@config": ["config"],
       "@config/*": ["config/*"],
-
-      "@store": ["app/store"],
-      "@store/*": ["app/store/*"],
 
       "@models": ["app/models"],
       "@models/*": ["app/models/*"],
@@ -28,9 +31,6 @@
 
       "@resources": ["resources"],
       "@resources/*": ["resources/*"],
-
-      "@views": ["resources/views"],
-      "@views/*": ["resources/views/*"],
 
       "@components": ["app/components"],
       "@components/*": ["app/components/*"]
