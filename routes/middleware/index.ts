@@ -6,4 +6,4 @@
 | in the order in which you provide them
 |
 */
-export default {};
+export default [];
