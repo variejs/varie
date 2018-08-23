@@ -1,13 +1,22 @@
-let $router = $app.make<RouterInterface>("$router");
+import { injectable, inject } from "inversify";
 import RouterInterface from "varie/lib/routing/RouterInterface";
 
-/*
-|--------------------------------------------------------------------------
-| Your default routes for your application
-|--------------------------------------------------------------------------
-|
-*/
+@injectable()
+export default class Routes {
+  private $router : RouterInterface;
+  constructor(@inject("$router") $router) {
+    this.$router = $router;
+  }
 
-$router.route("/", "Welcome");
+  register() {
+    /*
+    |--------------------------------------------------------------------------
+    | Your default routes for your application
+    |--------------------------------------------------------------------------
+    |
+    */
+    this.$router.route("/", "Welcome");
 
-$router.route("*", "errors/404");
+    this.$router.route("*", "errors/404");
+  }
+}
