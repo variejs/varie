@@ -2,6 +2,7 @@ export default class Loading {
   private timeoutSet = false;
   private spinnerTimeout = null;
   private requestsCounter = 0;
+  private spinnerId = "app-spinner";
 
   public request(config: object) {
     if (this.timeoutSet === false) {
@@ -36,7 +37,7 @@ export default class Loading {
 
     if (!spinnerElement) {
       let spinner = document.createElement("div");
-      spinner.id = "app-spinner";
+      spinner.id = this.spinnerId;
       spinner.classList.add("sk-container");
 
       let cube = document.createElement("div");
@@ -54,7 +55,7 @@ export default class Loading {
   }
 
   private _getSpinnerElement() {
-    return document.getElementById("spinner");
+    return document.getElementById(this.spinnerId);
   }
   private _turnOffSpinner() {
     clearTimeout(this.spinnerTimeout);
