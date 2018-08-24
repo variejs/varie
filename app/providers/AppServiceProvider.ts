@@ -1,5 +1,4 @@
 import ServiceProvider from "varie/lib/support/ServiceProvider";
-
 /*
 |--------------------------------------------------------------------------
 | App Service Provider
@@ -9,7 +8,11 @@ import ServiceProvider from "varie/lib/support/ServiceProvider";
 |
 */
 export default class AppProviderServiceProvider extends ServiceProvider {
-  public boot() {}
+  public boot() {
+    //
+  }
 
-  public register() {}
+  public register() {
+    //
+  }
 }

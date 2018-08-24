@@ -1,13 +1,13 @@
-let $router = $app.make<RouterInterface>("$router");
 import RouterInterface from "varie/lib/routing/RouterInterface";
 
-/*
-|--------------------------------------------------------------------------
-| Your default routes for your application
-|--------------------------------------------------------------------------
-|
-*/
+export default function($router: RouterInterface) {
+  /*
+  |--------------------------------------------------------------------------
+  | Your default routes for your application
+  |--------------------------------------------------------------------------
+  |
+  */
+  $router.route("/", "Welcome");
 
-$router.route("/", "Welcome");
-
-$router.route("*", "errors/404");
+  $router.route("*", "errors/404");
+}

@@ -6,10 +6,10 @@
 </template>
 
 <script>
-    import Notifications from 'varie/Notifications'
-    export default {
-      components : {
-        Notifications
-      }
-    }
+import Notifications from "varie/Notifications";
+export default {
+  components: {
+    Notifications,
+  },
+};
 </script>

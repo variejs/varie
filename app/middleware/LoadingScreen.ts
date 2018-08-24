@@ -1,14 +1,15 @@
-import { injectable } from 'inversify';
-import HttpMiddlewareInterface from "varie/lib/http/HttpMiddlewareInterface";
+import { injectable } from "inversify";
+import { AxiosResponse, AxiosRequestConfig, AxiosError } from "axios";
+import AxiosHttpMiddlewareInterface from "varie/lib/http/AxiosHttpMiddlewareInterface";
 
 @injectable()
-export default class Loading implements HttpMiddlewareInterface {
+export default class Loading implements AxiosHttpMiddlewareInterface {
   private timeoutSet = false;
   private spinnerTimeout = null;
   private requestsCounter = 0;
   private spinnerId = "app-spinner";
 
-  public request(config) {
+  public request(config: AxiosRequestConfig) {
     if (this.timeoutSet === false) {
       this.spinnerTimeout = setTimeout(() => {
         this._turnOnSpinner();
@@ -21,7 +22,7 @@ export default class Loading implements HttpMiddlewareInterface {
     return config;
   }
 
-  public response(response) {
+  public response(response: AxiosResponse) {
     if (--this.requestsCounter === 0) {
       this._turnOffSpinner();
     }
@@ -29,7 +30,7 @@ export default class Loading implements HttpMiddlewareInterface {
     return response;
   }
 
-  public responseError(error) {
+  public responseError(error: AxiosError) {
     if (--this.requestsCounter === 0) {
       this._turnOffSpinner();
     }
