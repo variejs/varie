@@ -1,10 +1,12 @@
-export default class Loading {
+import HttpMiddlewareInterface from "varie/lib/http/HttpMiddlewareInterface";
+
+export default class Loading implements HttpMiddlewareInterface {
   private timeoutSet = false;
   private spinnerTimeout = null;
   private requestsCounter = 0;
   private spinnerId = "app-spinner";
 
-  public request(config: object) {
+  public request(config) {
     if (this.timeoutSet === false) {
       this.spinnerTimeout = setTimeout(() => {
         this._turnOnSpinner();
@@ -17,7 +19,7 @@ export default class Loading {
     return config;
   }
 
-  public response(response: object) {
+  public response(response) {
     if (--this.requestsCounter === 0) {
       this._turnOffSpinner();
     }

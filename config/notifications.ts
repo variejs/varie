@@ -1,5 +1,3 @@
-import NotificationSettings from "varie/src/plugins/notifications/config";
-
 export default {
   /*
   |--------------------------------------------------------------------------
@@ -12,14 +10,4 @@ export default {
   */
 
   duration: 0,
-
-  /*
-  |--------------------------------------------------------------------------
-  | Component
-  |--------------------------------------------------------------------------
-  |
-  | You can set a different component to use for the notification package
-  |
-  */
-  component: NotificationSettings.component,
 };
