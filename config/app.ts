@@ -2,7 +2,6 @@ import HttpServiceProvider from "varie/lib/http/ServiceProvider";
 import AppServiceProvider from "@app/providers/AppServiceProvider";
 import StateServiceProvider from "varie/lib/state/ServiceProvider";
 import ConfigServiceProvider from "varie/lib/config/ServiceProvider";
-import RouteServiceProvider from "@app/providers/RouteServiceProvider";
 import RoutingServiceProvider from "varie/lib/routing/ServiceProvider";
 import FormsServiceProvider from "varie/lib/plugins/forms/ServiceProvider";
 import ValidationServiceProvider from "varie/lib/validation/ServiceProvider";
@@ -79,7 +78,6 @@ export default {
      * Application Service Providers...
      */
     AppServiceProvider,
-    RouteServiceProvider,
     NotificationsProvider,
   },
 };

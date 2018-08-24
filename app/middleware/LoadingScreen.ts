@@ -1,5 +1,7 @@
+import { injectable } from 'inversify';
 import HttpMiddlewareInterface from "varie/lib/http/HttpMiddlewareInterface";
 
+@injectable()
 export default class Loading implements HttpMiddlewareInterface {
   private timeoutSet = false;
   private spinnerTimeout = null;
