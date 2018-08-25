@@ -1,5 +1,8 @@
 import RouterInterface from "varie/lib/routing/RouterInterface";
 
+import ErrorViews from "@views/errors";
+import Welcome from '@views/Welcome.vue'
+
 export default function($router: RouterInterface) {
   /*
   |--------------------------------------------------------------------------
@@ -7,7 +10,7 @@ export default function($router: RouterInterface) {
   |--------------------------------------------------------------------------
   |
   */
-  $router.route("/", "Welcome");
+  $router.route("/", Welcome);
 
-  $router.route("*", "errors/404");
+  $router.route("*", ErrorViews.Error404);
 }
