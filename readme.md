@@ -10,10 +10,10 @@ development.
 - Validation
 - CLI Plugin
 - Fluent Router
+- State Management
 - Request Middleware
 - Customizable Bundler
-- Auto Loading Store System
-- Dependency Injection (DI)
+- Dependency Injection System (DI)
 
 ## Official Documentation
 
