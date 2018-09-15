@@ -6,13 +6,13 @@
     "prod": "webpack --mode production --no-progress --hide-modules"
   },
   "dependencies": {
-    "varie": "^0.3.10",
+    "varie": "^0.4.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "varie-bundler": "^0.3.5",
+    "varie-bundler": "^0.3.6",
     "vue-template-compiler": "^2.5.17"
   }
 }
