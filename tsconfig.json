@@ -6,7 +6,7 @@
     "moduleResolution": "Node",
     "baseUrl": "",
     "target": "ES5",
-    "lib": ["ES6", "dom"],
+    "lib": ["es6", "dom"],
     "types": ["vue", "vuex", "vue-router", "webpack-env", "reflect-metadata"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
