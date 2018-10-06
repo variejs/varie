@@ -1,5 +1,5 @@
 export default {
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Default layout
     |--------------------------------------------------------------------------
@@ -7,5 +7,5 @@ export default {
     | Set your default layout for all routes
     |
     */
-    defaultLayout: 'public',
+  defaultLayout: "public",
 };
