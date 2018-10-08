@@ -11,6 +11,7 @@ import AutoRegisterFiltersServiceProvider from "varie/lib/plugins/autoRegisterFi
 import AutoRegisterLayoutsServiceProvider from "varie/lib/plugins/autoRegisterLayouts/ServiceProvider";
 import AutoRegisterComponentsServiceProvider from "varie/lib/plugins/autoRegisterComponents/ServiceProvider";
 import AutoRegisterDirectivesServiceProvider from "varie/lib/plugins/autoRegisterDirectives/ServiceProvider";
+import AuthServiceProvider from "varie/lib/auth/ServiceProvider";
 
 export default {
   /*
@@ -73,7 +74,7 @@ export default {
     AutoRegisterLayoutsServiceProvider,
     AutoRegisterComponentsServiceProvider,
     AutoRegisterDirectivesServiceProvider,
-
+    AuthServiceProvider,
     /*
      * Application Service Providers...
      */
