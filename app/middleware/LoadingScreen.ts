@@ -1,8 +1,8 @@
 import { injectable } from "inversify";
-import HttpMiddlewareInterface from "varie/lib/http/HttpMiddlewareInterface";
+import AxiosHttpMiddlewareInterface from 'varie/lib/http/AxiosHttpMiddlewareInterface'
 
 @injectable()
-export default class Loading implements HttpMiddlewareInterface {
+export default class Loading implements AxiosHttpMiddlewareInterface {
   private requestsCounter = 0;
   private $timeoutDelay = 1250;
   private spinnerTimeout = null;
