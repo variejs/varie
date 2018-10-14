@@ -1,16 +1,17 @@
-import HttpServiceProvider from "varie/lib/http/ServiceProvider";
 import AppServiceProvider from "@app/providers/AppServiceProvider";
-import ConfigServiceProvider from "varie/lib/config/ServiceProvider";
+import HttpServiceProvider from "varie/lib/http/HttpServiceProvider";
 import StoreServiceProvider from "@app/providers/StoreServiceProvider";
 import RoutingServiceProvider from "@app/providers/RouteServiceProvider";
-import FormsServiceProvider from "varie/lib/plugins/forms/ServiceProvider";
-import ValidationServiceProvider from "varie/lib/validation/ServiceProvider";
-import NotificationsProvider from "varie/lib/plugins/notifications/ServiceProvider";
-import AutoRegisterMixinsServiceProvider from "varie/lib/plugins/autoRegisterMixins/ServiceProvider";
-import AutoRegisterFiltersServiceProvider from "varie/lib/plugins/autoRegisterFilters/ServiceProvider";
-import AutoRegisterLayoutsServiceProvider from "varie/lib/plugins/autoRegisterLayouts/ServiceProvider";
-import AutoRegisterComponentsServiceProvider from "varie/lib/plugins/autoRegisterComponents/ServiceProvider";
-import AutoRegisterDirectivesServiceProvider from "varie/lib/plugins/autoRegisterDirectives/ServiceProvider";
+import ConfigServiceProvider from "varie/lib/config/ConfigServiceProvider";
+import CookieServiceProvider from "varie/lib/cookies/CookieServiceProvider";
+import FormServiceProvider from "varie/lib/plugins/forms/FormServiceProvider";
+import ValidationServiceProvider from "varie/lib/validation/ValidationServiceProvider";
+import NotificationServiceProvider from "varie/lib/plugins/notifications/NotificationServiceProvider";
+import AutoRegisterMixinServiceProvider from "varie/lib/plugins/autoRegisterMixins/AutoRegisterMixinServiceProvider";
+import AutoRegisterFilterServiceProvider from "varie/lib/plugins/autoRegisterFilters/AutoRegisterFilterServiceProvider";
+import AutoRegisterLayoutServiceProvider from "varie/lib/plugins/autoRegisterLayouts/AutoRegisterLayoutServiceProvider";
+import AutoRegisterComponentServiceProvider from "varie/lib/plugins/autoRegisterComponents/AutoRegisterComponentServiceProvider";
+import AutoRegisterDirectiveServiceProvider from "varie/lib/plugins/autoRegisterDirectives/AutoRegisterDirectiveServiceProvider";
 
 export default {
   /*
@@ -60,24 +61,25 @@ export default {
   */
   providers: {
     /*
-     * Framework Service Providers...
+     * Varie Framework Service Providers...
      */
     ConfigServiceProvider,
+    CookieServiceProvider,
     StoreServiceProvider,
     RoutingServiceProvider,
     HttpServiceProvider,
-    FormsServiceProvider,
+    FormServiceProvider,
     ValidationServiceProvider,
-    AutoRegisterMixinsServiceProvider,
-    AutoRegisterFiltersServiceProvider,
-    AutoRegisterLayoutsServiceProvider,
-    AutoRegisterComponentsServiceProvider,
-    AutoRegisterDirectivesServiceProvider,
+    AutoRegisterMixinServiceProvider,
+    AutoRegisterFilterServiceProvider,
+    AutoRegisterLayoutServiceProvider,
+    AutoRegisterComponentServiceProvider,
+    AutoRegisterDirectiveServiceProvider,
 
     /*
      * Application Service Providers...
      */
     AppServiceProvider,
-    NotificationsProvider,
+    NotificationServiceProvider,
   },
 };
