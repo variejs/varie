@@ -1,6 +1,6 @@
 import Routes from "@routes";
-import ServiceProvider from "varie/lib/routing/ServiceProvider";
 import VueRouterService from "varie/lib/routing/VueRouterService";
+import ServiceProvider from "varie/lib/routing/RoutingServiceProvider";
 
 /*
 |--------------------------------------------------------------------------

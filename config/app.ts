@@ -1,9 +1,10 @@
 import AppServiceProvider from "@app/providers/AppServiceProvider";
 import HttpServiceProvider from "varie/lib/http/HttpServiceProvider";
-import StoreServiceProvider from "@app/providers/StoreServiceProvider";
+import StateServiceProvider from "@app/providers/StateServiceProvider";
 import RoutingServiceProvider from "@app/providers/RouteServiceProvider";
 import ConfigServiceProvider from "varie/lib/config/ConfigServiceProvider";
 import CookieServiceProvider from "varie/lib/cookies/CookieServiceProvider";
+import StorageServiceProvider from "varie/lib/storage/StorageServiceProvider";
 import FormServiceProvider from "varie/lib/plugins/forms/FormServiceProvider";
 import ValidationServiceProvider from "varie/lib/validation/ValidationServiceProvider";
 import NotificationServiceProvider from "varie/lib/plugins/notifications/NotificationServiceProvider";
@@ -65,7 +66,8 @@ export default {
      */
     ConfigServiceProvider,
     CookieServiceProvider,
-    StoreServiceProvider,
+    StorageServiceProvider,
+    StateServiceProvider,
     RoutingServiceProvider,
     HttpServiceProvider,
     FormServiceProvider,

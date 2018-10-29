@@ -1,4 +1,4 @@
-import ServiceProvider from "varie/lib/state/ServiceProvider";
+import ServiceProvider from "varie/lib/state/StateServiceProvider";
 import StateServiceInterface from "varie/lib/state/StateServiceInterface";
 
 /*
@@ -7,7 +7,7 @@ import StateServiceInterface from "varie/lib/state/StateServiceInterface";
 |--------------------------------------------------------------------------
 |
 */
-export default class StoreServiceProvider extends ServiceProvider {
+export default class StateServiceProvider extends ServiceProvider {
   public $store: StateServiceInterface;
 
   map() {
