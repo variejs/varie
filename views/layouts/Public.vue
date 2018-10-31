@@ -1,15 +1,15 @@
 <template>
     <div id="app">
-        <notifications></notifications>
+        <alerts></alerts>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
-import Notifications from "varie/Notifications";
+import Alerts from "varie/Alerts";
 export default {
   components: {
-    Notifications,
+    Alerts,
   },
 };
 </script>

@@ -1,5 +1,5 @@
 import { injectable } from "inversify";
-import AxiosHttpMiddlewareInterface from 'varie/lib/http/AxiosHttpMiddlewareInterface'
+import AxiosHttpMiddlewareInterface from "varie/lib/http/AxiosHttpMiddlewareInterface";
 
 @injectable()
 export default class Loading implements AxiosHttpMiddlewareInterface {
