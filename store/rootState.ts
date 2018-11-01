@@ -10,6 +10,8 @@ import AlertModel from "varie/lib/plugins/alerts/models/AlertModel";
 */
 
 export default interface rootState {
+  //
+
   varie: {
     alerts: {
       alerts: Array<AlertModel>;

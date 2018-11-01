@@ -9,7 +9,9 @@ import Vue from "vue";
 |
 */
 declare module "vue/types/options" {
-  interface ComponentOptions<V extends Vue> {}
+  interface ComponentOptions<V extends Vue> {
+    //
+  }
 }
 
 /*
@@ -21,5 +23,7 @@ declare module "vue/types/options" {
 |
 */
 declare module "vue/types/vue" {
-  interface Vue {}
+  interface Vue {
+    //
+  }
 }

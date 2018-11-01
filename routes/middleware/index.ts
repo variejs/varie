@@ -6,4 +6,6 @@
 | in your routes file easily.
 */
 
-export default {};
+export default {
+  //
+};
