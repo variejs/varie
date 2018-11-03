@@ -9,10 +9,10 @@ import ServiceProvider from "varie/lib/support/ServiceProvider";
 */
 export default class AppProviderServiceProvider extends ServiceProvider {
   public boot() {
-    //
+    // ...
   }
 
   public register() {
-    //
+    // ...
   }
 }
