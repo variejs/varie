@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes"/>
+        <% for (key in htmlWebpackPlugin.files.css) { %><link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet"><% } %>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+          !function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();
+        </script>
+        <% for (key in htmlWebpackPlugin.files.js) { %><% if(htmlWebpackPlugin.files.js[key].includes('.mjs')) { %><script type="module" src="<%= htmlWebpackPlugin.files.js[key] %>"></script><% } %><% } %>
+        <% for (key in htmlWebpackPlugin.files.js) { %><% if(htmlWebpackPlugin.files.js[key].includes('.js')) { %><script nomodule src="<%= htmlWebpackPlugin.files.js[key] %>"></script><% } %><% } %>
+    </body>
+</html>
