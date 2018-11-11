@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "importHelpers": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "outDir": "./public/",
-    "module": "esNext",
     "moduleResolution": "Node",
     "baseUrl": "",
-    "target": "ES5",
-    "lib": ["es6", "dom"],
+    "lib": ["esnext", "dom"],
     "types": ["vue", "vuex", "vue-router", "webpack-env", "reflect-metadata"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
