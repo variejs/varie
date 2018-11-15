@@ -5,11 +5,6 @@
     "watch": "webpack-dev-server --mode development --progress --hot",
     "prod": "webpack --mode production --no-progress --hide-modules"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/runtime": "^7.1.5",
