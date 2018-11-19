@@ -12,7 +12,8 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "varie-bundler": "^0.4.0",
-    "vue-template-compiler": "^2.5.17"
+    "varie-bundler": "github:variejs/varie-bundler#feature/modern-legacy-bundles",
+    "vue-template-compiler": "^2.5.17",
+    "webpack-bundle-analyzer": "^3.0.3"
   }
 }
