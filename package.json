@@ -6,7 +6,6 @@
     "prod": "webpack --mode production --no-progress --hide-modules"
   },
   "dependencies": {
-    "babel-preset-varie-app": "github:variejs/babel-preset-varie-app#master",
     "varie": "^0.10.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
@@ -14,7 +13,6 @@
   },
   "devDependencies": {
     "varie-bundler": "github:variejs/varie-bundler#feature/modern-legacy-bundles",
-    "vue-template-compiler": "^2.5.17",
-    "webpack-bundle-analyzer": "^3.0.3"
+    "vue-template-compiler": "^2.5.17"
   }
 }
