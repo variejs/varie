@@ -1,9 +1,13 @@
 {
   "private": true,
   "scripts": {
+    "analyze": "npm run dev -- --analyze",
+    "dev-modern": "npm run dev -- --modern",
+    "prod-modern": "npm run prod -- --modern",
+    "analyze-prod": "npm run dev -- --analyze",
     "dev": "webpack --mode development --progress --hide-modules",
-    "watch": "webpack-dev-server --mode development --progress --hot",
-    "prod": "webpack --mode production --no-progress --hide-modules"
+    "prod": "webpack --mode production --no-progress --hide-modules",
+    "watch": "webpack-dev-server --mode development --progress --hot"
   },
   "dependencies": {
     "varie": "^0.10.0",
@@ -13,6 +17,7 @@
   },
   "devDependencies": {
     "varie-bundler": "^0.5.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "webpack-bundle-analyzer": "^3.0.3"
   }
 }
