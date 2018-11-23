@@ -1,3 +1,3 @@
 module.exports = {
-  presets: [["varie-app"]],
+  presets: [["varie-app", {}]],
 };
