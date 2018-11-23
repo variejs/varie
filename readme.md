@@ -1,4 +1,7 @@
+<p align="center">
   <img src="https://avatars1.githubusercontent.com/u/33902889?s=400&u=6a10e83943f86f7f48a063088cdb959c789dedef&v=4">
+</p>
+  
 ## About Varie
 
 Varie is a Typescript framework for rapidly building powerful and elegant Vue.js applications. Bringing
