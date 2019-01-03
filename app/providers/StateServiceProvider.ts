@@ -10,6 +10,18 @@ import StateServiceInterface from "varie/lib/state/StateServiceInterface";
 export default class StateServiceProvider extends ServiceProvider {
   public $store: StateServiceInterface;
 
+  public async boot() {
+    super.boot();
+
+    // ...
+  }
+
+  public async register() {
+    super.register();
+
+    // ...
+  }
+
   map() {
     // this.$store.registerStore(...);
   }

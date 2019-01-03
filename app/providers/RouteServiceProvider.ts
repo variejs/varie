@@ -11,6 +11,18 @@ import ServiceProvider from "varie/lib/routing/RoutingServiceProvider";
 export default class RoutingServiceProvider extends ServiceProvider {
   public $router: VueRouterService;
 
+  public async boot() {
+    super.boot();
+
+    // ...
+  }
+
+  public async register() {
+    super.register();
+
+    // ...
+  }
+
   map() {
     this.$router.register(Routes);
   }

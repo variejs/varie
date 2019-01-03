@@ -10,7 +10,7 @@
     "watch": "webpack-dev-server --mode development --progress --hot"
   },
   "dependencies": {
-    "varie": "^0.10.4",
+    "varie": "^0.10.6",
     "vue": "^2.5.21",
     "vue-router": "^3.0.2",
     "vuex": "^3.0.1"
