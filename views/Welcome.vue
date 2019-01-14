@@ -2,8 +2,10 @@
   <section>
     <div class="flex-center position-ref full-height">
       <div class="content">
+        <div class="title">Varie</div>
         <div class="links">
-            loading
+            <a target="_blank" href="https://varie.io">Documentation</a>
+            <a target="_blank" href="https://github.com/variejs/varie">GitHub</a>
         </div>
       </div>
     </div>
