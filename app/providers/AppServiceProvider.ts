@@ -1,4 +1,4 @@
-import ServiceProvider from "varie/lib/support/ServiceProvider";
+import { ServiceProvider } from 'varie'
 
 /*
 |--------------------------------------------------------------------------
