@@ -3,18 +3,13 @@ import StateServiceProvider from "@app/providers/StateServiceProvider";
 import RoutingServiceProvider from "@app/providers/RouteServiceProvider";
 
 import {
-  // Core Service Providers
+  FormServiceProvider,
+  AlertServiceProvider,
   HttpServiceProvider,
   ConfigServiceProvider,
   CookieServiceProvider,
   StorageServiceProvider,
-
-  // Plugin Service Providers
-  FormServiceProvider,
-  AlertServiceProvider,
   ValidationServiceProvider,
-
-  // Auto Register Service Providers
   AutoRegisterMixinServiceProvider,
   AutoRegisterFilterServiceProvider,
   AutoRegisterLayoutServiceProvider,
