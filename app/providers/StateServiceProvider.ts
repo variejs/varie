@@ -1,4 +1,4 @@
-import { StateServiceProvider as ServiceProvider } from 'varie'
+import { StateServiceProvider as ServiceProvider } from "varie";
 import StateServiceInterface from "varie/lib/state/StateServiceInterface";
 
 /*
@@ -22,7 +22,7 @@ export default class StateServiceProvider extends ServiceProvider {
     // ...
   }
 
-  map() {
+  public map() {
     // this.$store.registerStore(...);
   }
 }

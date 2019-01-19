@@ -1,6 +1,6 @@
 import Routes from "@routes";
-import { ServiceProvider } from 'varie'
-import RouterInterface from 'varie/lib/routing/RouterInterface'
+import RouterInterface from "varie/lib/routing/RouterInterface";
+import { RoutingServiceProvider as ServiceProvider } from "varie";
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +18,6 @@ export default class RoutingServiceProvider extends ServiceProvider {
   }
 
   public async register() {
-    // @ts-ignore // todo - should not ignore
     super.register();
 
     // ...

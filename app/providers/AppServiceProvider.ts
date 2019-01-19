@@ -1,4 +1,4 @@
-import { ServiceProvider } from 'varie'
+import { ServiceProvider } from "varie";
 
 /*
 |--------------------------------------------------------------------------
@@ -9,7 +9,6 @@ import { ServiceProvider } from 'varie'
 |
 */
 export default class AppProviderServiceProvider extends ServiceProvider {
-
   public async boot() {
     // ...
   }

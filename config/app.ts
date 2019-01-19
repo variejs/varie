@@ -9,10 +9,6 @@ import {
   CookieServiceProvider,
   StorageServiceProvider,
 
-  // Support Service Providers
-  Model,
-  ServiceProvider,
-
   // Plugin Service Providers
   FormServiceProvider,
   AlertServiceProvider,
@@ -24,8 +20,7 @@ import {
   AutoRegisterLayoutServiceProvider,
   AutoRegisterComponentServiceProvider,
   AutoRegisterDirectiveServiceProvider,
-} from 'varie';
-
+} from "varie";
 
 export default {
   /*
@@ -80,9 +75,13 @@ export default {
     ConfigServiceProvider,
     CookieServiceProvider,
     StorageServiceProvider,
+    HttpServiceProvider,
     StateServiceProvider,
     RoutingServiceProvider,
-    HttpServiceProvider,
+
+    /*
+     * Varie Plugin Service Providers...
+     */
     FormServiceProvider,
     ValidationServiceProvider,
     AutoRegisterMixinServiceProvider,
@@ -90,6 +89,10 @@ export default {
     AutoRegisterLayoutServiceProvider,
     AutoRegisterComponentServiceProvider,
     AutoRegisterDirectiveServiceProvider,
+
+    /*
+     * Package Service Providers...
+     */
 
     /*
      * Application Service Providers...
