@@ -1,6 +1,6 @@
 import Routes from "@routes";
-import VueRouterService from "varie/lib/routing/VueRouterService";
-import ServiceProvider from "varie/lib/routing/RoutingServiceProvider";
+import RouterInterface from "varie/lib/routing/RouterInterface";
+import { RoutingServiceProvider as ServiceProvider } from "varie";
 
 /*
 |--------------------------------------------------------------------------
@@ -9,7 +9,7 @@ import ServiceProvider from "varie/lib/routing/RoutingServiceProvider";
 |
 */
 export default class RoutingServiceProvider extends ServiceProvider {
-  public $router: VueRouterService;
+  public $router: RouterInterface;
 
   public async boot() {
     super.boot();
