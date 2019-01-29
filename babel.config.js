@@ -1,3 +1,10 @@
 module.exports = {
-  presets: [["varie-app", {}]],
+  presets: [
+    [
+      "varie-app",
+      {
+        jsx: true,
+      },
+    ],
+  ],
 };
