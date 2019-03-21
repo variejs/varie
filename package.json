@@ -2,9 +2,11 @@
   "private": true,
   "scripts": {
     "analyze": "npm run dev -- --analyze",
+    "analyze-prod": "npm run dev -- --analyze",
+    "inspect": "npm run dev -- --inspect",
+    "inspect-prod": "npm run dev -- --inspect",
     "dev-modern": "npm run dev -- --modern",
     "prod-modern": "npm run prod -- --modern",
-    "analyze-prod": "npm run dev -- --analyze",
     "dev": "webpack --env development --no-progress --hide-modules",
     "prod": "webpack --env production --no-progress --hide-modules",
     "watch": "webpack-dev-server --mode development --progress --hot"
@@ -16,7 +18,7 @@
     "vuex": "^3.1.0"
   },
   "devDependencies": {
-    "varie-bundler": "^0.9.1",
+    "varie-bundler": "^0.9.2",
     "vue-template-compiler": "^2.6.2",
     "webpack-bundle-analyzer": "^3.0.3"
   }
