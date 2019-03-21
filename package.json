@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "analyze": "npm run dev -- --analyze",
+    "analyze-dev": "npm run dev -- --analyze",
     "analyze-prod": "npm run dev -- --analyze",
-    "inspect": "npm run dev -- --inspect",
+    "inspect-dev": "npm run dev -- --inspect",
     "inspect-prod": "npm run dev -- --inspect",
     "dev-modern": "npm run dev -- --modern",
     "prod-modern": "npm run prod -- --modern",
