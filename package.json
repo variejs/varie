@@ -5,18 +5,18 @@
     "dev-modern": "npm run dev -- --modern",
     "prod-modern": "npm run prod -- --modern",
     "analyze-prod": "npm run dev -- --analyze",
-    "dev": "webpack --mode development --progress --hide-modules",
-    "prod": "webpack --mode production --no-progress --hide-modules",
+    "dev": "webpack --env development --no-progress --hide-modules",
+    "prod": "webpack --env production --no-progress --hide-modules",
     "watch": "webpack-dev-server --mode development --progress --hot"
   },
   "dependencies": {
-    "varie": "^0.11.3",
-    "vue": "^2.6.2",
+    "varie": "^0.12.0",
+    "vue": "^2.6.10",
     "vue-router": "^3.0.2",
     "vuex": "^3.1.0"
   },
   "devDependencies": {
-    "varie-bundler": "^0.7.7",
+    "varie-bundler": "^0.9.0",
     "vue-template-compiler": "^2.6.2",
     "webpack-bundle-analyzer": "^3.0.3"
   }
