@@ -6,7 +6,7 @@
 |
 */
 import Vue from "vue";
-import { Application, HttpServiceProvider } from "varie";
+import { Application } from "varie";
 import BaseLayout from "varie/BaseLayout.vue";
 import RouterInterface from "varie/lib/routing/RouterInterface";
 import StateServiceInterface from "varie/lib/state/StateServiceInterface";
