@@ -13,5 +13,13 @@ module.exports = function(env) {
       "@resources": "resources",
       "@components": "app/components",
     })
+    .purgeCss([
+      'app',
+      'views',
+      'node_modules/varie'
+    ])
+    .globalSassIncludes('resources/sass/base/_variables.scss')
+    .aggressiveVendorSplitting()
+    .eslint()
     .build();
 };
