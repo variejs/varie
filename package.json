@@ -7,9 +7,9 @@
     "inspect-prod": "npm run dev -- --inspect",
     "dev-modern": "npm run dev -- --modern",
     "prod-modern": "npm run prod -- --modern",
-    "dev": "webpack --env development --no-progress --hide-modules",
-    "prod": "webpack --env production --no-progress --hide-modules",
-    "watch": "webpack-dev-server --mode development --progress --hot"
+    "dev": "cross-env TS_NODE_PROJECT=\"node_modules/varie-bundler/webpack-tsconfig.json\" webpack --env development --no-progress --hide-modules",
+    "prod": "cross-env TS_NODE_PROJECT=\"node_modules/varie-bundler/webpack-tsconfig.json\" webpack --env production --no-progress --hide-modules",
+    "watch": "cross-env TS_NODE_PROJECT=\"node_modules/varie-bundler/webpack-tsconfig.json\" webpack-dev-server --mode development --progress --hot"
   },
   "dependencies": {
     "varie": "^0.12.0",
@@ -24,7 +24,7 @@
     "eslint": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.0",
-    "varie-bundler": "^1.0.0",
+    "varie-bundler": "^2.0.5",
     "vue-template-compiler": "^2.6.0"
   }
 }
