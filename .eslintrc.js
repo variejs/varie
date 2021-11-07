@@ -7,18 +7,18 @@ module.exports = {
   },
 
   extends: [
-    'plugin:vue/essential',
-    '@vue/prettier',
-    '@vue/typescript',
-    'eslint:recommended',
+    "plugin:vue/essential",
+    "@vue/prettier",
+    "@vue/typescript",
+    "eslint:recommended",
   ],
 
   rules: {
-    'no-console': 'warn',
-    'no-debugger': 'warn',
+    "no-console": "warn",
+    "no-debugger": "warn",
   },
 
   parserOptions: {
-    parser: '@typescript-eslint/parser',
+    parser: "@typescript-eslint/parser",
   },
 };

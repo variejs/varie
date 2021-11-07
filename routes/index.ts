@@ -4,7 +4,7 @@ import middleware from "./middleware";
 import ErrorViews from "@views/errors";
 import Welcome from "@views/Welcome.vue";
 
-export default function($router: RouterInterface) {
+export default function ($router: RouterInterface) {
   /*
   |--------------------------------------------------------------------------
   | Your default routes for your application
